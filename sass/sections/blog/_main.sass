@@ -1,0 +1,141 @@
+section.main
+
+    h2
+        margin-bottom: 24px
+        +screen(m)
+            margin-bottom: 16px
+
+    div.main_articles
+        display: grid
+        justify-content: start
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+        +screen(l)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(s)
+            grid-template-columns: 1fr
+
+        a.article_card
+            width: 100%
+            &:first-child
+                grid-column: 1 / 3
+                aspect-ratio: 2.05 / 1
+                +screen(l)
+                    aspect-ratio: 1 / 1
+                    grid-column: auto
+                +screen(m)
+                    aspect-ratio: 335 / 253
+            &:last-child
+                aspect-ratio: 1 / 1
+                +screen(m)
+                    aspect-ratio: 335 / 253
+
+    div.navigation
+        display: grid
+        grid-template-columns: 1fr max-content
+        grid-gap: 20px
+        border-bottom: 1px solid rgba(0,0,0,0.5)
+        padding-top: 20px
+        padding-bottom: 20px
+        margin-bottom: 40px
+        margin-top: 40px
+        +screen(m)
+            margin-top: 50px
+            margin-bottom: 10px
+            padding: unset
+            grid-template-columns: 1fr
+            border: unset
+            grid-gap: 15px
+        div.tags
+            display: flex
+            flex-wrap: wrap
+            gap: 10px 50px
+            +screen(m)
+                justify-content: space-between
+                border-bottom: 1px solid rgba(0,0,0,0.5)
+                padding-top: 10px
+                padding-bottom: 10px
+                gap: 10px
+            a
+                font-weight: 400
+                font-size: 18px
+                line-height: 130%
+                color: #000
+                opacity: 0.5
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+                &.active
+                    opacity: 1
+
+        div.total
+            font-weight: 400
+            font-size: 18px
+            line-height: 130%
+            color: #000
+            +screen(m)
+                display: flex
+                justify-content: space-between
+                font-size: 12px
+                line-height: 120%
+            span:first-child
+                opacity: 0.5
+
+    div.list
+        display: grid
+        align-items: start
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 36px 20px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(xs)
+            grid-template-columns: 1fr
+            grid-gap: 15px
+
+        a.article_card
+            background-image: unset !important
+            border-image: unset
+            color: black
+            padding: unset
+            aspect-ratio: unset
+            img
+                display: block
+                width: 100%
+                height: 100%
+                aspect-ratio: 1 / 1
+                object-fit: cover
+                object-position: center center
+                border-radius: 5px
+                +screen(m)
+                    height: auto
+                    aspect-ratio: 335 / 308
+            div.text
+                padding-top: 20px
+                +screen(m)
+                    padding-top: 10px
+                
+                span.date
+                    display: block
+                    color: #858585 !important
+                    margin-bottom: 10px
+
+                strong
+                    font-weight: 400
+                    +screen(m)
+                        font-weight: 500
+                        font-size: 14px
+
+                & > *
+                    color: black !important
+                    opacity: 1
+
+                div.more
+                    margin-top: 24px
+                    +screen(m)
+                        margin-top: 10px
+                    span
+                        color: #2E5770
+                    svg path
+                        stroke: #2E5770
+
+            

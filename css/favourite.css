@@ -1,0 +1,171 @@
+section.main div.title {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  margin-bottom: 28px;
+}
+@media (max-width: 480px) {
+  section.main div.title {
+    grid-template-columns: -webkit-max-content;
+    grid-template-columns: max-content;
+    grid-gap: 16px;
+  }
+}
+section.main div.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 40px 22px;
+}
+@media (max-width: 1600px) {
+  section.main div.list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 1280px) {
+  section.main div.list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 640px) {
+  section.main div.list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+section.pagination {
+  margin-bottom: 120px;
+}
+@media (max-width: 960px) {
+  section.pagination {
+    margin-bottom: 50px;
+  }
+}
+section.pagination button.more {
+  width: 100%;
+  background-color: #F8F8F8;
+  border: unset;
+  margin-top: 38px;
+  margin-bottom: 40px;
+}
+@media (max-width: 960px) {
+  section.pagination button.more {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    grid-column: content;
+  }
+}
+section.pagination button.more:hover {
+  background-color: #223A2F;
+}
+section.pagination div.pagination {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 30px;
+}
+@media (max-width: 960px) {
+  section.pagination div.pagination {
+    grid-gap: 24px;
+  }
+}
+section.pagination div.pagination div.prev, section.pagination div.pagination div.next {
+  cursor: pointer;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 5px;
+  opacity: 0.5;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #0b1700;
+}
+@media (max-width: 960px) {
+  section.pagination div.pagination div.prev, section.pagination div.pagination div.next {
+    font-size: 12px;
+  }
+}
+section.pagination div.pagination div.prev:hover, section.pagination div.pagination div.next:hover {
+  opacity: 1;
+}
+section.pagination div.pagination div.prev svg, section.pagination div.pagination div.next svg {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+section.pagination div.pagination div.prev svg path, section.pagination div.pagination div.next svg path {
+  fill: #0B1700;
+}
+section.pagination div.pagination div.next svg {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+section.pagination div.pagination div.nums {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-gap: 10px;
+}
+section.pagination div.pagination div.nums span {
+  cursor: pointer;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  width: 37px;
+  height: 37px;
+  font-size: 18px;
+  line-height: 167%;
+  color: #575c60;
+}
+@media (max-width: 960px) {
+  section.pagination div.pagination div.nums span {
+    font-size: 12px;
+    width: 23px;
+    height: 23px;
+  }
+}
+section.pagination div.pagination div.nums span:hover {
+  font-weight: 500;
+  color: #0b1700;
+}
+section.pagination div.pagination div.nums span.active {
+  font-weight: 500;
+  border-color: #0b1700;
+  color: #0b1700;
+}
+
+section.seo {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 167%;
+  color: #8f8f8f;
+  margin-bottom: 120px;
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.seo {
+    font-size: 12px;
+    line-height: 120%;
+    margin-bottom: 50px;
+  }
+}/*# sourceMappingURL=favourite.css.map */

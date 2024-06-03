@@ -1,0 +1,121 @@
+section.main
+    margin-bottom: 70px
+    +screen(m)
+        margin-bottom: 40px
+
+    div.container
+        display: grid
+
+    h2
+        margin-bottom: 36px
+        +screen(m)
+            margin-bottom: 10px
+
+    div.filters
+        display: grid
+        grid-template-columns: 1fr max-content
+        justify-content: space-between
+        margin-bottom: 32px
+        +screen(m)
+            order: 2
+            align-items: center
+            grid-template-columns: max-content 1fr
+            margin-bottom: unset
+    
+    form.filter
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 15px
+        +screen(m)
+            display: none
+
+        div.reset
+            cursor: pointer
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            align-items: center
+            grid-gap: 6px
+            font-weight: 400
+            font-size: 16px
+            color: #0b1700
+            opacity: 0.5
+            &:hover
+                opacity: 1
+
+            svg
+                width: 16px
+                height: 16px
+
+    div.filter
+        display: none
+        font-weight: 400
+        font-size: 12px
+        line-height: 120%
+        color: #262721
+        text-align: right
+        span:last-child
+            color: #c7c7c7
+        +screen(m)
+            display: block
+
+    div.description
+        display: grid
+        grid-template-columns: auto 1fr
+        grid-template-rows: max-content 1fr
+        grid-template-areas: 'Image Text' 'Image More'
+        grid-gap: 12px 20px
+        +screen(l)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(m)
+            order: 1
+            grid-template-areas: 'Image' 'Text' 'More'
+            grid-template-rows: auto
+            grid-template-columns: 1fr
+            margin-bottom: 50px
+
+        img.preview
+            grid-area: Image
+            width: 100%
+            max-width: 570px
+            aspect-ratio: 570 / 360
+            object-fit: cover
+            object-position: center center
+            +screen(m)
+                margin: 0 auto
+
+        div.text
+            grid-area: Text
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 7
+                    line-clamp: 7
+            -webkit-box-orient: vertical
+            font-weight: 400
+            font-size: 20px
+            line-height: 130%
+            color: #8f8f8f
+            opacity: 0.7
+            height: max-content
+            +screen(m)
+                font-size: 12px
+                line-height: auto
+            &.full
+                display: block
+
+        span.more
+            grid-area: More
+            cursor: pointer
+            font-weight: 600
+            font-size: 20px
+            line-height: 130%
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #223A2F
+            opacity: 0.7
+            +screen(m)
+                font-size: 12px
+                line-height: auto
+            &:hover
+                opacity: 1

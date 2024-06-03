@@ -1,0 +1,49 @@
+include ../../common/_mixins.pug
+
+section.main
+    div.container
+
+        div.breadcrumbs
+            a(href="index.html") Главная
+            span Контакты
+        
+        h2 Контакты
+
+        div.contacts
+            div.phone
+                span Телефон
+                a(href="tel:88007750719") 8 800 775⁠-07⁠-19
+            div.email
+                span Email
+                a(href="mailto:hello@chaai.com") hello@chaai.com
+            div.schedule
+                span Время работы
+                strong Ежедневно с 10:00 до 22:00 (мск)
+            button НАПИСАТЬ В ЧАТ
+
+        div.form
+            form(action="")
+                input(type="text", name="name", placeholder="Имя *", required)
+                input(type="tel", name="phone", placeholder="Телефон *", required)
+                input(type="email", name="email", placeholder="Email *", required).email
+                textarea(name="commenty", placeholder="Ваш комментарий", rows="4").comment
+                button оставить заявку
+            div.map
+                iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a68fd6473f89a894f39d13ec99479672416507740cdfd56a6d87b53b3694853&amp;source=constructor" frameborder="0")
+                strong Москва, ул. Автомобилистов 40, 1 этаж
+
+        div.service
+            h2 клиентский сервис
+            div.table
+                div.row
+                    span Отзывы по качестве обслуживания и ассортимента
+                    a(href="mailti:info@chai.ru") info@chai.ru
+                div.row
+                    span По вопросам трудоустройства и открытых вакансий
+                    a(href="mailti:hr@chai.ru") hr@chai.ru
+                div.row
+                    span По вопросам партнёрских взаимоотношений и сотрудничества
+                    a(href="mailti:pr@chai.ru") pr@chai.ru
+                div.row
+                    span Предложения по закупкам товара и упаковки
+                    a(href="mailti:manufactiry@chai.ru") manufactiry@chai.ru

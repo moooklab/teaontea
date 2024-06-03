@@ -1,0 +1,98 @@
+section.reviews
+
+    & > div.container
+        display: grid
+        align-items: start
+        grid-template-columns: max-content 1fr
+        grid-gap: 92px
+        +screen(xl)
+            grid-gap: 32px
+        +screen(l)
+            justify-items: center
+            grid-template-columns: 1fr
+
+    div.total
+        display: grid
+        width: 100%
+        max-width: 360px
+        +screen(xl)
+            max-width: 320px
+
+        span.text
+            font-weight: 400
+            font-size: 18px
+            line-height: 130%
+            color: #000
+            margin-bottom: 16px
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+
+        span.rate
+            font-weight: 400
+            font-size: 20px
+            line-height: 130%
+            color: #000
+            margin-bottom: 15px
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+                margin-bottom: 5px
+
+        div.rating
+            display: grid
+            grid-auto-flow: column
+            align-items: center
+            grid-auto-columns: max-content
+            grid-gap: 10px
+            margin-bottom: 20px
+            +screen(m)
+                margin-bottom: 16px
+            div.stars
+                display: grid
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                grid-gap: 5px
+                div.star.empty
+                    svg path
+                        fill: transparent
+                        stroke: #FED064
+                        stroke-width: 1.5px
+
+            span.count
+                display: grid
+                grid-template-columns: max-content max-content
+                align-items: center
+                font-weight: 400
+                font-size: 16px
+                color: #b0b0b0
+                &::before
+                    content: ''
+                    display: inline-block
+                    width: 1px
+                    height: 1em
+                    background-color: #b0b0b0
+                    margin-right: 10px
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+
+        button
+            background: black
+            color: white
+            border-radius: 0 25px
+            width: 100%
+            max-width: 324px
+
+    div.list
+        display: grid
+        grid-gap: 20px
+        +screen(m)
+            grid-gap: 10px
+
+    section.pagination
+        margin-top: 30px
+        +screen(m)
+            margin-top: 20px
+        button
+            display: none

@@ -1,0 +1,94 @@
+section.navigation
+    margin-bottom: 120px
+    +screen(m)
+        margin-bottom: 50px
+
+    div.tags
+        display: flex
+        flex-wrap: wrap
+        gap: 16px
+        border-top: 1px solid #a9a9a9
+        max-width: 1327px
+        padding-top: 30px
+        margin-bottom: 120px
+        +screen(m)
+            margin-bottom: 50px
+            padding-top: 20px
+            grid-gap: 10px
+        a.tag
+            cursor: pointer
+            padding: 11px 32px
+            background: #f0f0f0
+            font-weight: 400
+            font-size: 16px
+            line-height: 150%
+            color: #000
+            +screen(m)
+                border-radius: 2px
+                padding: 11px 32px
+                font-size: 12px
+                line-height: 120%
+
+    div.prevnext
+        display: grid
+        grid-auto-flow: column
+        align-items: center
+        justify-content: space-between
+        grid-gap: 64px
+        +screen(m)
+            grid-gap: 10px
+            grid-auto-flow: row
+            grid-template-columns: 1fr
+            width: 100%
+
+        img
+            width: 80px
+            height: 80px
+            +screen(m)
+                width: 40px
+                height: 40px
+
+    a.prev, a.next
+        display: grid
+        +screen(m)
+            grid-gap: 10px
+            border-radius: 2px
+            background: #f9f9f9
+            padding: 16px
+            width: 100%
+        div.text
+            display: grid
+            grid-gap: 12px
+            +screen(m)
+                grid-gap: 5px
+        span
+            font-weight: 400
+            font-size: 16px
+            line-height: 150%
+            color: #000
+            opacity: 0.5
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+        strong
+            font-weight: 400
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            color: #000
+            +screen(m)
+                font-size: 12px
+
+    a.prev
+        display: grid
+        align-items: center
+        grid-template-columns: max-content 1fr
+
+    a.next
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr max-content
+        text-align: right
+        img
+            transform: rotate(180deg)

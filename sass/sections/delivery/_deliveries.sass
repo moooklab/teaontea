@@ -1,0 +1,178 @@
+section.deliveries
+    margin-bottom: 120px
+    +screen(m)
+        margin-bottom: 50px
+
+    div.container
+        max-width: 1327px
+
+    h2
+        margin-bottom: 24px
+
+    nav
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
+        margin-bottom: 32px
+        margin-top: 40px
+        +screen(m)
+            margin-top: 20px
+            margin-bottom: 34px
+
+        a
+            display: block
+            padding: 10px 16px
+            border: 1px solid rgba(148, 148, 148, 0.4)
+            width: max-content
+            font-weight: 400
+            font-size: 16px
+            line-height: 175%
+            color: #949494
+            +screen(m)
+                font-size: 12px
+                padding: 12px
+            &:hover
+                border-color: #0B1700
+                color: #0b1700
+
+    fieldset.select
+        div.select_current span:nth-child(2)
+            color: inherit
+        div.select_list
+            max-width: calc(100vw - var(--gap) * 4)
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+        +screen(m)
+            grid-gap: 10px
+            grid-template-columns: 1fr
+
+    div.delivery_country
+        display: none !important
+        &.active
+            display: grid !important
+
+    div.delivery
+        display: grid
+        background-color: rgba(34, 58, 47, 0.05)
+        padding: 40px 50px
+        +screen(m)
+            padding: 20px
+        h3
+            font-weight: 600
+            font-size: 20px
+            line-height: 130%
+            text-transform: uppercase
+            color: #000
+            margin-bottom: 16px
+            +screen(m)
+                font-size: 14px
+                margin-bottom: 12px
+        strong
+            font-weight: 500
+            font-size: 16px
+            line-height: 130%
+            color: #000
+            margin-bottom: 10px
+            +screen(m)
+                font-size: 12px
+                margin-bottom: 5px
+        span
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            color: #000
+            max-width: 300px
+            +screen(m)
+                font-size: 12px
+        div.prices
+            margin-top: 32px
+            display: flex
+            flex-wrap: wrap
+            gap: 30px
+            +screen(m)
+                margin-top: 16px
+
+            div.price
+                display: grid
+                grid-gap: 4px
+                +screen(m)
+                    grid-gap: 9px
+                span.price
+                    font-weight: 600
+                    font-size: 20px
+                    line-height: 130%
+                    text-transform: uppercase
+                    color: #000
+                    +screen(m)
+                        font-size: 16px
+                span.note
+                    font-weight: 400
+                    font-size: 12px
+                    line-height: 130%
+                    color: #000
+                    opacity: 0.5
+                    +screen(m)
+                        font-size: 12px
+        ul
+            display: grid
+            grid-gap: 15px
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            color: #000
+            +screen(m)
+                font-size: 12px
+                grid-gap: 10px
+            li
+                position: relative
+                padding-left: 15px
+                &:before
+                    content: ''
+                    position: absolute
+                    top: 0.4em
+                    left: 0
+                    width: 5px
+                    height: 5px
+                    border-radius: 5px
+                    background-color: black
+
+    div.delivery_country.second, div.delivery_country.third
+        display: grid
+        grid-gap: 15px
+        +screen(m)
+            background-color: rgba(34, 58, 47, 0.05)
+            grid-gap: 0
+        
+        & > h3
+            padding: 20px
+            padding-bottom: unset
+
+        div.list
+            background-color: rgba(34, 58, 47, 0.05)
+            padding: 40px 50px
+            grid-gap: 40px
+            +screen(m)
+                padding: 20px
+                grid-gap: 20px
+                background-color: transparent
+            div.title
+                grid-column: 1 / 3
+                font-weight: 600
+                font-size: 20px
+                line-height: 130%
+                color: #000
+                text-transform: uppercase
+                +screen(m)
+                    grid-column: auto
+                    font-size: 12px
+            div.delivery
+                background-color: transparent
+                padding: unset
+
+
+
+
+

@@ -1,0 +1,150 @@
+section.deliveries
+    div.container
+
+        div.breadcrumbs
+            a(href="index.html") Главная
+            span Доставка и оплата
+
+        h2 Доставка и оплата
+
+        form.city
+            fieldset.select(class='select_country')
+                div(tabindex="0").select_current
+                    input(type="radio", id='select_country_0', value='Москва, Московская область, Санкт-Петербург, Россия', name='select_country', checked)
+                    span Москва, Московская область, Санкт-Петербург, Россия
+                    input(type="radio", id='select_country_1', value='Доставка по России, СНГ, Весь Мир', name='select_country')
+                    span Доставка по России, СНГ, Весь Мир
+                    input(type="radio", id='select_country_2', value='СНГ и весь Мир', name='select_country')
+                    span СНГ и весь Мир
+                    div.arrow
+                        include ../../../images/select_arrow.svg
+                div.select_list
+                    label(for='select_country_0') Москва, Московская область, Санкт-Петербург, Россия
+                    label(for='select_country_1') Доставка по России, СНГ, Весь Мир
+                    label(for='select_country_2') СНГ и весь Мир
+
+        nav
+            a(href="#delivery") Доставка и оплата
+            a(href="#payment") Способы оплаты
+            a(href="#faq") FAQ
+
+        div.delivery_country.first.active
+            div.list
+                div.delivery
+                    h3 В пункт выдачи и постамат
+                    strong ПВЗ
+                    span Отправляем посылку в день заказа или на следующий день
+                    div.prices
+                        div.price
+                            span.price 0 ₽
+                            span.note (при заказе от 3500 ₽)
+                        div.price
+                            span.price 350 ₽
+                            span.note (при заказе до 3500 ₽)
+                div.delivery
+                    h3 Курьером
+                    span Отправляем посылку в день заказа или на следующий день
+                    div.prices
+                        div.price
+                            span.price 0 ₽
+                            span.note (при заказе от 3500 ₽)
+                        div.price
+                            span.price 650 ₽
+                            span.note (Express Доставка за 4 часа)
+                div.delivery
+                    h3 Самовывоз
+                    strong ИЗ МАГАЗИНА
+                    span Магазин находится по адресу: г. Москва, Автомобильный пр. 10, стр. 4
+                    div.prices
+                        div.price
+                            span.price 0 ₽
+                            span.note (при заказе от 3500 ₽)
+                div.delivery
+                    ul
+                        li Если заказ доставляет продавец, он сам устанавливает срок и стоимость
+                        li Точную стоимость, сроки и доступные способы доставки покажем при оформлении и оплате заказа - они могут отличаться от информации на этой странице.
+                        li Стоимость экспресс-доставки, самовывоза из магазинов и торговых залов продавца, а также самовывоза алкоголя и лекарств, доступных только к предварительному бронированию, рассчитывается отдельно.
+        div.delivery_country.second
+            h3 Доставка по России, СНГ, Весь Мир
+            div.list
+                div.title В пункт выдачи и постамат
+                div.delivery
+                    strong СДЕК
+                    span Отправляем посылку в день заказа или на следующий день
+                    div.prices
+                        div.price
+                            span.price 0 ₽
+                            span.note (при заказе от 3500 ₽)
+                        div.price
+                            span.price 350 ₽
+                            span.note (при заказе до 3500 ₽)
+                div.delivery
+                    strong Почта России
+                    span Отправляем посылку в день заказа или на следующий день
+                    div.prices
+                        div.price
+                            span.price 0 ₽
+                            span.note (при заказе от 3500 ₽)
+                        div.price
+                            span.price 350 ₽
+                            span.note (при заказе до 3500 ₽)
+                div.delivery
+                    strong Яндекс доставка
+                    span Магазин находится по адресу: г. Москва, Автомобильный пр. 10, стр. 4
+                    div.prices
+                        div.price
+                            span.price 0 ₽
+                            span.note (при заказе от 3500 ₽)
+                        div.price
+                            span.price 350 ₽
+                            span.note (при заказе до 3500 ₽)
+        div.delivery_country.third
+            h3 СНГ и весь Мир
+            div.list
+                div.title В пункт выдачи и постамат
+                div.delivery
+                    strong СДЕК
+                    span Отправляем посылку в день заказа или на следующий день
+                    div.prices
+                        div.price
+                            span.price 0 ₽
+                            span.note (при заказе от 3500 ₽)
+                        div.price
+                            span.price 350 ₽
+                            span.note (при заказе до 3500 ₽)
+                div.delivery
+                    strong Почта России
+                    span Отправляем посылку в день заказа или на следующий день
+                    div.prices
+                        div.price
+                            span.price 0 ₽
+                            span.note (при заказе от 3500 ₽)
+                        div.price
+                            span.price 350 ₽
+                            span.note (при заказе до 3500 ₽)
+                div.delivery
+                    strong Яндекс доставка
+                    span Магазин находится по адресу: г. Москва, Автомобильный пр. 10, стр. 4
+                    div.prices
+                        div.price
+                            span.price 0 ₽
+                            span.note (при заказе от 3500 ₽)
+                        div.price
+                            span.price 350 ₽
+                            span.note (до 15 000 ₽ по тарифам Сдек и Почты России)
+                
+    script.
+        form = document.querySelector('form.city')
+        form.addEventListener('change', event => {
+            inputs = form.querySelectorAll('input')
+            inputs.forEach( (input, index) => {
+                if( input.checked ) {
+                    deliveries = document.querySelectorAll('div.delivery_country')
+                    deliveries.forEach( delivery => {
+                        delivery.classList.remove('active')
+                    })
+                    deliveries[index].classList.add('active')
+                }
+            })
+        })
+

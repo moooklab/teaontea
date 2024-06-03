@@ -1,0 +1,13 @@
+extends common/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/index.css")
+
+block content
+    include sections/index/_main.pug
+    include sections/index/_categories.pug
+    include sections/index/_popular.pug
+    include sections/index/_collections.pug
+    include sections/index/_blog.pug
+    include sections/index/_reviews.pug
+    include sections/_forms.pug

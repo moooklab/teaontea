@@ -1,0 +1,24 @@
+section.reviews
+    div.container
+        h2 Отзывы
+        div.swiper
+            div.swiper-wrapper
+                -for( i = 1; i <= 12; i++ )
+                    div.swiper-slide.review_card
+                        div.stars
+                            img(src="images/star.svg", alt="")
+                            img(src="images/star.svg", alt="")
+                            img(src="images/star.svg", alt="")
+                            img(src="images/star.svg", alt="")
+                            img(src="images/star.svg", alt="")
+                        strong.title Чай улун
+                        span.text Предварительные выводы неутешительны: семантический разбор внешних противодействий обеспечивает внешних противодействий
+                        div.gallery
+                            img(src="images/webp/19.webp", alt="")
+                            img(src="images/webp/20.webp", alt="")
+                            img(src="images/webp/21.webp", alt="")
+                            span.more +2 фото
+            div.swiper-navigation
+                div.arrow: include ../../../images/swiper_arrow.svg
+                div.arrow: include ../../../images/swiper_arrow.svg
+        button Оставить отзыв

@@ -1,0 +1,250 @@
+section.additional
+    margin-bottom: 120px
+    +screen(m)
+        margin-bottom: 50px
+
+    div.tabs_captions
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: 1fr
+        text-align: center
+        background-color: #F0F0F0
+        padding: 4px
+        div.tab_caption
+            cursor: pointer
+            padding: 10px
+            font-weight: 400
+            font-size: 18px
+            line-height: 133%
+            color: #000
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+            &.opened
+                font-weight: 500
+                background-color: #222629
+                color: white
+
+    div.tabs_contents
+        div.tab_content
+            display: none
+            &.opened
+                display: block
+
+    div.description
+        img
+            width: 100%
+            aspect-ratio: 1776 / 576
+            object-fit: cover
+            object-position: center center
+            margin-bottom: 20px
+            margin-top: 40px
+            +screen(m)
+                margin-top: 20px
+                margin-bottom: 16px
+            +screen(s)
+                aspect-ratio: 331 / 196
+        div.text
+            columns: 2
+            line-height: 125%
+            max-width: 1220px
+            opacity: 0.8
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+                columns: 1
+            p
+                margin-bottom: 1em
+
+    div.products
+        margin-top: 40px
+        position: relative
+        +screen(m)
+            margin-top: 20px
+        h2
+            margin-bottom: 36px
+            +screen(m)
+                margin-bottom: 16px
+        div.swiper.products
+            overflow: visible
+
+            & > div.swiper-wrapper > div.swiper-slide
+                z-index: 1
+                opacity: 0
+                transition: opacity .3s
+                &.swiper-slide-visible
+                    opacity: 1
+                &:hover
+                    z-index: 10
+
+            & > div.swiper-navigation
+                pointer-events: none
+                position: absolute
+                display: grid
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                grid-gap: 10px
+                top: -90px
+                right: 0
+                z-index: 9
+                +screen(m)
+                    display: none
+                div.arrow
+                    pointer-events: auto
+                    cursor: pointer
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    width: 70px
+                    height: 70px
+                    border: 1px solid #223A2F
+                    border-radius: 50%
+                    transition: all .2s
+                    svg path
+                        stroke: #223A2F
+                    &:first-child
+                        transform: scale(-1)
+                    &:hover
+                        background-color: #223A2F
+                        border-color: #223A2F
+                        svg path
+                            stroke: white
+
+                    &.swiper-button-disabled
+                        pointer-events: none
+                        user-select: none
+                        opacity: 0.3
+
+    div.reviews
+        width: 100%
+        display: grid
+        align-items: start
+        grid-template-columns: max-content 1fr
+        grid-gap: 92px
+        margin-top: 40px
+        +screen(xl)
+            grid-gap: 32px
+        +screen(l)
+            justify-items: center
+            grid-template-columns: 1fr
+        +screen(m)
+            margin-top: 20px
+
+        div.total
+            display: grid
+            width: 100%
+            max-width: 360px
+            +screen(xl)
+                max-width: 320px
+
+            strong
+                font-weight: 500
+                font-size: 32px
+                line-height: 120%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                color: #1c1c1b
+                margin-bottom: 20px
+                +screen(m)
+                    font-size: 20px
+                    margin-bottom: 16px
+
+            span.text
+                font-weight: 400
+                font-size: 18px
+                line-height: 130%
+                color: #000
+                margin-bottom: 16px
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+
+            span.rate
+                font-weight: 400
+                font-size: 20px
+                line-height: 130%
+                color: #000
+                margin-bottom: 15px
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+                    margin-bottom: 5px
+
+            div.rating
+                display: grid
+                grid-auto-flow: column
+                align-items: center
+                grid-auto-columns: max-content
+                grid-gap: 10px
+                margin-bottom: 20px
+                +screen(m)
+                    margin-bottom: 16px
+                div.stars
+                    display: grid
+                    grid-auto-flow: column
+                    grid-auto-columns: max-content
+                    grid-gap: 5px
+                    div.star.empty
+                        svg path
+                            fill: transparent
+                            stroke: #FED064
+                            stroke-width: 1.5px
+
+                span.count
+                    display: grid
+                    grid-template-columns: max-content max-content
+                    align-items: center
+                    font-weight: 400
+                    font-size: 16px
+                    color: #b0b0b0
+                    &::before
+                        content: ''
+                        display: inline-block
+                        width: 1px
+                        height: 1em
+                        background-color: #b0b0b0
+                        margin-right: 10px
+                    +screen(m)
+                        font-size: 12px
+                        line-height: 120%
+
+            button
+                background: black
+                color: white
+                border-radius: 0 25px
+                width: 100%
+                max-width: 324px
+
+        div.list
+            display: grid
+            grid-gap: 20px
+            +screen(m)
+                grid-gap: 10px
+
+        section.pagination
+            margin-top: 30px
+            +screen(m)
+                margin-top: 20px
+            button
+                display: none
+
+        div.review
+            grid-template-columns: 1fr
+            div.content
+                span.date
+                    margin-bottom: unset
+                    position: absolute
+                    bottom: 0
+                    right: 0
+                a.answer
+                    display: none
+                div.stars
+                    position: absolute
+                div.gallery
+                    margin-bottom: unset
+            a.review_product
+                display: none
+
+
+
+    

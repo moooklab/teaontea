@@ -1,0 +1,48 @@
+section.payments
+    margin-bottom: 120px
+    +screen(m)
+        margin-bottom: 50px
+
+    div.container
+        max-width: 1327px
+
+    h2
+        margin-bottom: 24px
+        +screen(m)
+            grid-gap: 16px
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 23px
+        +screen(m)
+            grid-gap: 10px
+        +screen(s)
+            grid-template-columns: 1fr
+
+    div.payment
+        display: grid
+        align-items: center
+        justify-items: center
+        border: 1px solid #c1c1c1
+        width: 100%
+        aspect-ratio: 427 / 170
+        font-weight: 400
+        font-size: 24px
+        line-height: 133%
+        color: #000
+        +screen(m)
+            font-weight: 400
+            font-size: 12px
+            line-height: 120%
+            aspect-ratio: unset
+            padding: 17px
+
+        svg
+            width: 100%
+            max-width: 240px
+            max-height: 85px
+
+        +screen(m)
+            &:has(svg)
+                display: none

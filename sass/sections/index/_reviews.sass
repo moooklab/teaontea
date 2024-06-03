@@ -1,0 +1,139 @@
+section.reviews
+    padding-top: 160px
+    padding-bottom: 60px
+    background-color: #F7F7F2
+    +screen(m)
+        padding-top: 50px
+        padding-bottom: 50px
+        background-color: white
+
+    div.container
+        display: grid
+        grid-gap: 40px
+        +screen(m)
+            grid-gap: 16px
+
+    div.swiper
+        width: 100%
+        min-width: 0
+        position: relative
+        overflow: visible
+        div.swiper-slide:nth-child(2n)
+            background-color: #F7F7F2
+
+    div.review_card
+        display: grid
+        align-items: start
+        justify-items: center
+        background-color: white
+        padding: 32px 20px 16px
+        div.stars
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 8px
+            margin-bottom: 16px
+            +screen(m)
+                grid-gap: 5px
+                margin-bottom: 10px
+            img
+                width: 24px
+                height: 24px
+                object-fit: contain
+                object-position: center center
+                +screen(m)
+                    width: 16px
+                    height: 16px
+        strong.title
+            font-weight: 400
+            font-size: 24px
+            line-height: 167%
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            color: #0b1700
+            margin-bottom: 16px
+            +screen(m)
+                font-size: 14px
+                margin-bottom: 10px
+        span.text
+            font-weight: 400
+            font-size: 18px
+            line-height: 156%
+            text-align: center
+            color: #575c60
+            margin-bottom: 24px
+            +screen(m)
+                font-size: 12px
+                line-height: auto
+                margin-bottom: 16px
+        div.gallery
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-gap: 8px
+            +screen(m)
+                grid-gap: 5px
+
+            img
+                width: 100%
+                aspect-ratio: 1 / 1
+                object-fit: cover
+                object-position: center center
+
+            span.more
+                display: grid
+                align-items: center
+                justify-items: center
+                width: 100%
+                aspect-ratio: 1 / 1
+                background-color: #223A2F
+                font-weight: 400
+                font-size: 18px
+                line-height: 150%
+                text-align: center
+                color: #fff
+                +screen(m)
+                    font-size: 12px
+
+    div.swiper-navigation
+        pointer-events: none
+        position: absolute
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        grid-gap: 10px
+        top: -95px
+        right: 0
+        z-index: 9
+        +screen(m)
+            display: none
+        div.arrow
+            pointer-events: auto
+            cursor: pointer
+            display: grid
+            align-items: center
+            justify-items: center
+            width: 70px
+            height: 70px
+            border: 1px solid #223A2F
+            border-radius: 50%
+            transition: all .2s
+            svg path
+                stroke: #223A2F
+            &:first-child
+                transform: scale(-1)
+            &:hover
+                background-color: #223A2F
+                border-color: #223A2F
+                svg path
+                    stroke: white
+
+            &.swiper-button-disabled
+                pointer-events: none
+                user-select: none
+                opacity: 0.3
+
+    button
+        justify-self: center
+        min-width: 260px
+
+

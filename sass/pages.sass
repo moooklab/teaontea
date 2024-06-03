@@ -1,0 +1,31 @@
+// Общее 
+@import common/_mixins
+
+//Секции
+section.pages
+    margin-top: 120px
+    margin-bottom: 120px
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 50px
+
+    div.container
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(s)
+            grid-template-columns: 1fr
+
+    a
+        display: grid
+        align-items: center
+        justify-items: center
+        padding: 20px
+        border: 1px solid rgba(0,0,0,0.1)
+        +screen(m)
+            font-size: 12px
+        &:hover
+            background-color: #223A2F
+            color: white

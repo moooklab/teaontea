@@ -1,0 +1,91 @@
+section.popular
+    margin-bottom: 160px
+    +screen(m)
+        margin-bottom: 50px
+
+    div.container
+
+        h2
+            margin-bottom: 30px
+            user-select: none
+            +screen(m)
+                margin-bottom: 12px
+
+
+        div.tabs_captions
+            display: flex
+            justify-content: flex-end
+            gap: 32px
+            margin-bottom: 24px
+            +screen(m)
+                gap: 15px
+                justify-content: flex-start
+
+        span.tab_caption
+            cursor: pointer
+            font-weight: 400
+            font-size: 24px
+            line-height: 167%
+            color: #575c60
+            +screen(m)
+                font-size: 12px
+            &.opened
+                pointer-events: none
+                font-weight: 600
+                color: #223A2F
+
+        div.tab_content 
+            display: none
+            width: 100%
+
+            &.opened
+                display: grid
+
+            & > div.swiper
+                width: 100%
+                min-width: 0
+                overflow: visible
+                position: relative
+
+                div.swiper-slide
+                    z-index: 1
+                    &:hover
+                        z-index: 10
+
+                & > div.swiper-navigation
+                    pointer-events: none
+                    position: absolute
+                    display: grid
+                    grid-auto-flow: column
+                    grid-auto-columns: max-content
+                    grid-gap: 10px
+                    top: -148px
+                    right: 0
+                    z-index: 9
+                    +screen(m)
+                        display: none
+                    div.arrow
+                        pointer-events: auto
+                        cursor: pointer
+                        display: grid
+                        align-items: center
+                        justify-items: center
+                        width: 70px
+                        height: 70px
+                        border: 1px solid #223A2F
+                        border-radius: 50%
+                        transition: all .2s
+                        svg path
+                            stroke: #223A2F
+                        &:first-child
+                            transform: scale(-1)
+                        &:hover
+                            background-color: #223A2F
+                            border-color: #223A2F
+                            svg path
+                                stroke: white
+
+                        &.swiper-button-disabled
+                            pointer-events: none
+                            user-select: none
+                            opacity: 0.3

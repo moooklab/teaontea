@@ -1,0 +1,108 @@
+
+<dialog data-modal-name="auth">
+    <div class="container">
+        <div class="cross" data-modal-close="data-modal-close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z" fill="black"/>
+</svg>
+
+        </div>
+        <div class="content">
+            <h3>Авторизация</h3>
+            <form action=""> 
+                <input type="text" placeholder="Email / Телефон" required="required"/>
+                <fieldset class="text">
+                    <input type="password" placeholder="Пароль" required="required"/>
+                    <div class="eye" onclick="showPassword(this)">
+                        <div class="show_password"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.4342 10.91C11.1584 10.91 12.5562 9.51224 12.5562 7.78801C12.5562 6.06378 11.1584 4.666 9.4342 4.666C7.70997 4.666 6.31219 6.06378 6.31219 7.78801C6.31219 9.51224 7.70997 10.91 9.4342 10.91Z" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500183 7.78802C0.655183 7.37702 3.23921 0.775024 9.44421 0.775024C15.8482 0.775024 18.3692 7.78802 18.3692 7.78802C18.3692 7.78802 15.6482 14.801 9.44421 14.801C3.03921 14.801 0.500183 7.78802 0.500183 7.78802Z" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                        </div>
+                        <div class="hide_password"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.67722 11.4004C9.59622 11.4064 9.51523 11.4095 9.43423 11.4095C7.71123 11.4095 6.31223 10.0105 6.31223 8.28746C6.31223 8.18646 6.3172 8.08543 6.3262 7.98643" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.20023 6.10844C7.76723 5.52744 8.55923 5.16643 9.43423 5.16643C11.1572 5.16643 12.5552 6.56546 12.5552 8.28746C12.5552 9.16346 12.1952 9.95447 11.6142 10.5215" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.22818 3.13547C5.56118 2.07547 7.28221 1.27448 9.44321 1.27448C15.8472 1.27448 18.3682 8.28748 18.3682 8.28748C18.3682 8.28748 17.1692 11.3774 14.5482 13.4554" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.7502 14.5724C11.7832 15.0204 10.6822 15.3005 9.44321 15.3005C3.03821 15.3005 0.499176 8.28746 0.499176 8.28746C0.578176 8.07746 1.29016 6.25445 2.79416 4.51945" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.36722 1.27448L16.5002 15.4075" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="remember">
+                    <fieldset class="switch">
+                        <label class="checkbox2">
+                            <input type="checkbox" name=""/><span></span>
+                        </label><span>Запомнить меня</span>
+                    </fieldset><a onclick="createDialog('password')">Забыли пароль?</a>
+                </div>
+                <button>Войти</button>
+            </form>
+            <div class="socials"><span>или</span>
+                <div class="list"><a href="index.html"><img src="images/google.svg" alt=""/></a><a href="index.html"><img src="images/vk.svg" alt=""/></a><a href="index.html"><img src="images/facebook.svg" alt=""/></a><a href="index.html"><img src="images/apple.svg" alt=""/></a></div>
+            </div>
+            <hr/><span class="register">Нет аккаунта? <a onclick="createDialog('register')">Зарегистрироваться</a></span>
+        </div>
+    </div>
+</dialog>
+<dialog data-modal-name="register">
+    <div class="container">
+        <div class="cross" data-modal-close="data-modal-close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z" fill="black"/>
+</svg>
+
+        </div>
+        <div class="content">
+            <h3>Регистрация</h3>
+            <form action=""> 
+                <input type="text" placeholder="Имя" required="required"/>
+                <input type="text" placeholder="Email" required="required"/>
+                <input type="text" placeholder="Телефон" required="required"/>
+                <fieldset class="text">
+                    <input type="password" placeholder="Пароль" required="required"/>
+                    <div class="eye" onclick="showPassword(this)">
+                        <div class="show_password"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.4342 10.91C11.1584 10.91 12.5562 9.51224 12.5562 7.78801C12.5562 6.06378 11.1584 4.666 9.4342 4.666C7.70997 4.666 6.31219 6.06378 6.31219 7.78801C6.31219 9.51224 7.70997 10.91 9.4342 10.91Z" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500183 7.78802C0.655183 7.37702 3.23921 0.775024 9.44421 0.775024C15.8482 0.775024 18.3692 7.78802 18.3692 7.78802C18.3692 7.78802 15.6482 14.801 9.44421 14.801C3.03921 14.801 0.500183 7.78802 0.500183 7.78802Z" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                        </div>
+                        <div class="hide_password"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.67722 11.4004C9.59622 11.4064 9.51523 11.4095 9.43423 11.4095C7.71123 11.4095 6.31223 10.0105 6.31223 8.28746C6.31223 8.18646 6.3172 8.08543 6.3262 7.98643" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.20023 6.10844C7.76723 5.52744 8.55923 5.16643 9.43423 5.16643C11.1572 5.16643 12.5552 6.56546 12.5552 8.28746C12.5552 9.16346 12.1952 9.95447 11.6142 10.5215" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.22818 3.13547C5.56118 2.07547 7.28221 1.27448 9.44321 1.27448C15.8472 1.27448 18.3682 8.28748 18.3682 8.28748C18.3682 8.28748 17.1692 11.3774 14.5482 13.4554" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.7502 14.5724C11.7832 15.0204 10.6822 15.3005 9.44321 15.3005C3.03821 15.3005 0.499176 8.28746 0.499176 8.28746C0.578176 8.07746 1.29016 6.25445 2.79416 4.51945" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.36722 1.27448L16.5002 15.4075" stroke="#4E5154" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                        </div>
+                    </div>
+                </fieldset>
+                <button>Зарегистрироваться</button><span>Нажимая на кнопку «Зарегистрироваться», вы даёте своё согласие на Обработку персональных данных.</span>
+            </form>
+            <div class="socials"><span>или</span>
+                <div class="list"><a href="index.html"><img src="images/google.svg" alt=""/></a><a href="index.html"><img src="images/vk.svg" alt=""/></a><a href="index.html"><img src="images/facebook.svg" alt=""/></a><a href="index.html"><img src="images/apple.svg" alt=""/></a></div>
+            </div>
+            <hr/><a class="auth" onclick="createDialog('auth')">Войти в уже существующий аккаунт</a>
+        </div>
+    </div>
+</dialog>
+<dialog data-modal-name="cart">
+    <div class="container">
+        <div class="cross" data-modal-close="data-modal-close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z" fill="black"/>
+</svg>
+
+        </div>
+        <div class="content">
+            <h3>Корзина</h3>
+            <div class="list"><a class="cart_product" href="product.html"><img src="images/webp/9.webp" alt=""/>
+                    <div class="info"><span class="title">Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год</span><span class="text">Золотой пион из Гуджоу 2022 SHQ осень</span><span class="details">25 гр - 1 000 ₽</span><span class="price">2 400 ₽ / 2 040 ₽</span></div></a><a class="cart_product" href="product.html"><img src="images/webp/9.webp" alt=""/>
+                    <div class="info"><span class="title">Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год</span><span class="text">Золотой пион из Гуджоу 2022 SHQ осень</span><span class="details">25 гр - 1 000 ₽</span><span class="price">2 400 ₽ / 2 040 ₽</span></div></a><a class="cart_product" href="product.html"><img src="images/webp/9.webp" alt=""/>
+                    <div class="info"><span class="title">Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год</span><span class="text">Золотой пион из Гуджоу 2022 SHQ осень</span><span class="details">25 гр - 1 000 ₽</span><span class="price">2 400 ₽ / 2 040 ₽</span></div></a><a class="cart_product" href="product.html"><img src="images/webp/9.webp" alt=""/>
+                    <div class="info"><span class="title">Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год</span><span class="text">Золотой пион из Гуджоу 2022 SHQ осень</span><span class="details">25 гр - 1 000 ₽</span><span class="price">2 400 ₽ / 2 040 ₽</span></div></a></div><span class="result">Итого: 2 290 ₽</span>
+            <div class="buttons"><a class="button next" href="cart.html">Перейти к оформлению</a><a class="button back" data-modal-close="data-modal-close">продолжить покупки</a></div>
+        </div>
+    </div>
+</dialog>

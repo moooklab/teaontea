@@ -1,0 +1,139 @@
+footer
+    background-color: #223A2F
+    color: white
+
+    div.top
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        justify-content: space-between
+        align-items: start
+        grid-gap: 32px
+        padding-top: 70px
+        padding-bottom: 40px
+        +screen(m)
+            padding-top: 30px
+            padding-bottom: 26px
+            grid-auto-flow: unset
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 15px 24px
+        +screen(s)
+            grid-template-columns: repeat(2, 1fr)
+
+        div.logotype
+            +screen(m)
+                grid-column: 1 / 3
+            +screen(s)
+                margin-bottom: 35px
+            a.logotype
+                display: grid
+                align-items: center
+                grid-template-columns: max-content max-content
+                grid-gap: 11px
+                margin-bottom: 28px
+                +screen(s)
+                    margin-bottom: 15px
+                    div.emblem svg
+                        width: 38px
+                        height: 34px
+                    div.name svg
+                        width: 64px
+                        height: 12px
+
+                svg path
+                    fill: white
+            span
+                display: block
+                font-weight: 400
+                font-size: 18px
+                line-height: 156%
+                color: #f4f4f4
+                opacity: 0.8
+                +screen(s)
+                    font-size: 12px
+                    line-height: normal
+
+        menu
+            display: grid
+            grid-gap: 10px
+            strong
+                font-weight: 600
+                font-size: 16px
+                line-height: 187%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+            a
+                +screen(s)
+                    font-size: 12px
+                
+        div.contacts
+            display: grid
+            grid-gap: 5px
+            strong
+                font-weight: 600
+                font-size: 16px
+                line-height: 187%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                white-space: nowrap
+            a.email
+                +screen(s)
+                    font-size: 12px
+            a.phone
+                font-weight: 600
+                font-size: 20px
+                text-transform: uppercase
+                white-space: nowrap
+                +screen(s)
+                    font-size: 18px
+                    margin-top: 5px
+                    margin-bottom: 2px
+            span
+                font-size: 12px
+                color: #f4f4f4
+
+    div.bottom
+        display: grid
+        grid-template-columns: [full-start] var(--full) [breakout-start] var(--breakout) [content-start] var(--content) [content-end] var(--breakout) [breakout-end] var(--full) [full-end]
+        padding-top: 30px
+        padding-bottom: 40px
+        border-top: 1px solid rgba(255,255,255,0.5)
+        grid-column: full
+        +screen(m)
+            padding-top: 24px
+            padding-bottom: 30px
+
+        div.wrap
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            justify-content: space-between
+            grid-gap: 16px 32px
+            align-items: center
+            grid-column: content
+            +screen(m)
+                grid-auto-flow: unset
+                grid-template-columns: repeat(2, 1fr)
+                justify-content: start
+            +screen(s)
+                grid-template-columns: 1fr
+
+            span, a
+                font-weight: 400
+                font-size: 14px
+                line-height: 200%
+                color: #f4f4f4
+                opacity: 0.5
+
+            div.payments
+                display: grid
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                align-items: center
+                grid-gap: 15px
+                div.list
+                    display: grid
+                    grid-auto-flow: column
+                    grid-auto-columns: max-content
+                    align-items: center
+                    grid-gap: 10px

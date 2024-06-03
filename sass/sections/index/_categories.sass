@@ -1,0 +1,31 @@
+section.categories
+    margin-bottom: 160px
+    +screen(m)
+        margin-bottom: 50px
+        
+    a
+        grid-column: full
+        padding: 80px var(--gap)
+        font-weight: 600
+        font-size: 44px
+        line-height: 100%
+        text-transform: uppercase
+        color: white
+        background-size: cover
+        +screen(m)
+            font-weight: 600
+            font-size: 14px
+            line-height: 130%
+            letter-spacing: 0.02em
+            padding: 25px var(--gap)
+
+    button
+        grid-column: full
+        width: 100%
+        background-color: #F8F8F8
+        border: unset
+        +screen(m)
+            margin-top: 15px
+            grid-column: content
+        &:hover
+            background-color: #223A2F

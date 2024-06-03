@@ -1,0 +1,80 @@
+section.pagination
+    margin-bottom: 120px
+    +screen(m)
+        margin-bottom: 50px
+
+    button.more
+        width: 100%
+        background-color: #F8F8F8
+        border: unset
+        margin-top: 38px
+        margin-bottom: 40px
+        +screen(m)
+            margin-top: 20px
+            margin-bottom: 30px
+            grid-column: content
+        &:hover
+            background-color: #223A2F
+
+    div.pagination
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        justify-content: center
+        align-items: center
+        grid-gap: 30px
+        +screen(m)
+            grid-gap: 24px
+
+        div.prev, div.next
+            cursor: pointer
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            align-items: center
+            grid-gap: 5px
+            opacity: 0.5
+            font-weight: 400
+            text-transform: uppercase
+            color: #0b1700
+            +screen(m)
+                font-size: 12px
+            &:hover
+                opacity: 1
+            svg
+                transform: rotate(90deg)
+                path
+                    fill: #0B1700
+
+        div.next
+            svg
+                transform: rotate(-90deg)
+
+        div.nums
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 10px
+            span
+                cursor: pointer
+                display: grid
+                align-items: center
+                justify-items: center
+                border: 1px solid transparent
+                border-radius: 5px
+                width: 37px
+                height: 37px
+                font-size: 18px
+                line-height: 167%
+                color: #575c60
+                +screen(m)
+                    font-size: 12px
+                    width: 23px
+                    height: 23px
+                &:hover
+                    font-weight: 500
+                    color: #0b1700
+                &.active
+                    font-weight: 500
+                    border-color: #0b1700
+                    color: #0b1700

@@ -1,0 +1,48 @@
+section.faq
+    margin-bottom: 120px
+    +screen(m)
+        margin-bottom: 50px
+
+    div.container
+        max-width: 1250px
+
+    div.accordion
+        border-bottom: 1px solid rgb(0, 0, 0, 0.1)
+        &.open
+            div.accordion_caption
+                div.arrow
+                    transform: rotate(180deg)
+
+    div.accordion_caption
+        cursor: pointer
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr max-content
+        grid-gap: 32px
+        padding-top: 20px
+        padding-bottom: 20px
+        +screen(m)
+            padding-top: 15px
+            padding-bottom: 15px
+        span
+            font-weight: 500
+            font-size: 16px
+            line-height: 130%
+            color: #000
+            +screen(m)
+                font-weight: 500
+                font-size: 12px
+                line-height: 120%
+        div.arrow
+            transition: all .3s
+            
+    div.accordion_wrap
+        font-weight: 400
+        font-size: 14px
+        line-height: 130%
+        color: #000
+        padding-bottom: 20px
+        +screen(m)
+            font-size: 12px
+            line-height: 120%
+            padding-bottom: 15px

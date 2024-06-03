@@ -1,0 +1,270 @@
+section.main {
+  margin-bottom: 120px;
+}
+@media (max-width: 960px) {
+  section.main {
+    margin-bottom: 50px;
+  }
+}
+section.main div.container {
+  display: grid;
+}
+section.main h2 {
+  margin-bottom: 55px;
+}
+@media (max-width: 960px) {
+  section.main h2 {
+    margin-bottom: 20px;
+  }
+}
+section.main div.contacts {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 24px;
+  max-width: 1320px;
+  margin-bottom: 74px;
+}
+@media (max-width: 960px) {
+  section.main div.contacts {
+    grid-auto-flow: unset;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px 30px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin-bottom: 20px;
+  }
+}
+section.main div.contacts span {
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #000;
+  opacity: 0.5;
+}
+@media (max-width: 960px) {
+  section.main div.contacts span {
+    font-size: 12px;
+  }
+}
+section.main div.contacts a, section.main div.contacts strong {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #000;
+}
+@media (max-width: 960px) {
+  section.main div.contacts a, section.main div.contacts strong {
+    font-size: 14px;
+  }
+}
+@media (max-width: 960px) {
+  section.main div.contacts div.schedule {
+    grid-column: 1/3;
+  }
+}
+section.main div.contacts button {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 18px 32px;
+  min-width: 268px;
+}
+@media (max-width: 960px) {
+  section.main div.contacts button {
+    display: none;
+  }
+}
+section.main div.form {
+  display: grid;
+  grid-template-columns: 540px 1fr;
+  grid-gap: 45px;
+  margin-bottom: 80px;
+}
+@media (max-width: 1280px) {
+  section.main div.form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+@media (max-width: 960px) {
+  section.main div.form {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+}
+section.main div.form form {
+  display: grid;
+  grid-gap: 10px;
+}
+@media (max-width: 960px) {
+  section.main div.form form {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+section.main div.form form input, section.main div.form form textarea {
+  border-color: #e4e5e5;
+  padding: 24px 20px;
+}
+@media (max-width: 960px) {
+  section.main div.form form input, section.main div.form form textarea {
+    padding: 20px 15px;
+  }
+}
+section.main div.form form input::-webkit-input-placeholder, section.main div.form form textarea::-webkit-input-placeholder {
+  color: #a1a1a1;
+}
+section.main div.form form input::-moz-placeholder, section.main div.form form textarea::-moz-placeholder {
+  color: #a1a1a1;
+}
+section.main div.form form input:-ms-input-placeholder, section.main div.form form textarea:-ms-input-placeholder {
+  color: #a1a1a1;
+}
+section.main div.form form input::-ms-input-placeholder, section.main div.form form textarea::-ms-input-placeholder {
+  color: #a1a1a1;
+}
+section.main div.form form input::placeholder, section.main div.form form textarea::placeholder {
+  color: #a1a1a1;
+}
+section.main div.form form button {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  padding: 18px 32px;
+  min-width: 268px;
+  height: 64px;
+}
+@media (max-width: 960px) {
+  section.main div.form form button {
+    width: 100%;
+    padding: 17px 32px;
+    margin-top: unset;
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.main div.form form button:hover {
+  background-color: #223A2F;
+}
+section.main div.form div.map {
+  display: grid;
+  grid-template-rows: 1fr -webkit-max-content;
+  grid-template-rows: 1fr max-content;
+  grid-gap: 22px;
+}
+@media (max-width: 960px) {
+  section.main div.form div.map {
+    grid-gap: 10px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    aspect-ratio: 4/3;
+  }
+}
+@media (max-width: 480px) {
+  section.main div.form div.map {
+    aspect-ratio: 3/4;
+  }
+}
+section.main div.form div.map iframe {
+  width: 100%;
+  height: 100%;
+}
+section.main div.form div.map strong {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #000;
+}
+@media (max-width: 960px) {
+  section.main div.form div.map strong {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.main div.service h2 {
+  margin-bottom: 14px;
+}
+@media (max-width: 960px) {
+  section.main div.service h2 {
+    margin-bottom: 6px;
+  }
+}
+section.main div.service div.table div.row {
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 960px) {
+  section.main div.service div.table div.row {
+    grid-template-columns: 1fr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+section.main div.service div.table div.row:last-child {
+  border: unset;
+}
+section.main div.service div.table div.row > * {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 222%;
+  color: #000;
+}
+@media (max-width: 960px) {
+  section.main div.service div.table div.row > * {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.main div.service div.table div.row > *:nth-child(2n) {
+  text-align: right;
+  font-weight: 600;
+  font-size: 20px;
+}
+@media (max-width: 960px) {
+  section.main div.service div.table div.row > *:nth-child(2n) {
+    text-align: left;
+    font-size: 14px;
+  }
+}
+
+section.seo {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 167%;
+  color: #8f8f8f;
+  margin-bottom: 120px;
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.seo {
+    font-size: 12px;
+    line-height: 120%;
+    margin-bottom: 50px;
+  }
+}/*# sourceMappingURL=contacts.css.map */

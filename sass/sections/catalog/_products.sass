@@ -1,0 +1,48 @@
+section.products
+
+    div.categories
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
+        margin-bottom: 50px
+        +screen(m)
+            flex-wrap: unset
+            overflow-x: scroll
+            width: calc(100% + var(--gap) * 2)
+            margin-left: calc(var(--gap) * -1)
+            padding-left: 20px
+            padding-right: 20px
+            margin-bottom: 25px
+            &::-webkit-scrollbar
+                opacity: 0
+                display: none
+        a
+            display: block
+            width: max-content
+            font-weight: 400
+            font-size: 16px
+            line-height: 175%
+            color: #949494
+            border: 1px solid #949494
+            padding: 10px 34px
+            white-space: nowrap
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+                color: #949494
+                padding: 12px 20px
+            &:hover
+                border-color: #0b1700
+                color: #0b1700
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-gap: 40px 22px
+        +screen(xl)
+            grid-template-columns: repeat(4, 1fr)
+        +screen(l)
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 20px
+        +screen(s)
+            grid-template-columns: repeat(2, 1fr)

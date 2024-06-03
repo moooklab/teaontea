@@ -1,0 +1,166 @@
+section.main
+    
+    div.mission
+        padding: 40px 50px
+        margin-bottom: 155px
+        background-color: rgba(34, 58, 47, 0.1)
+        +screen(m)
+            margin-bottom: 50px
+
+        h2
+            margin-bottom: 24px
+
+        span
+            font-weight: 400
+            font-size: 20px
+            line-height: 130%
+            color: #000
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+
+    div.list
+        display: grid
+        margin-bottom: 60px
+        +screen(m)
+            grid-gap: 58px
+
+    div.tea
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        +screen(m)
+            grid-template-columns: 1fr
+            border: 1px solid rgba(0, 0, 0, 0.5)
+            border-radius: 2px
+
+        div.text
+            display: grid
+            align-items: center
+            justify-items: center
+            text-align: center
+            padding: 32px
+            border: 1px solid rgba(0, 0, 0, 0.5)
+            width: 100%
+            height: 100%
+            +screen(m)
+                order: 2
+                border: unset !important
+                padding: 20px 18px
+            div.text_wrap
+                max-width: 460px
+                h3
+                    margin-bottom: 24px
+                span
+                    display: block
+                    margin-bottom: 32px
+                    +screen(m)
+                        font-size: 12px
+                        line-height: 120%
+                        text-align: center
+                        color: #000
+                button
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    color: white
+                    background: #000
+                    max-width: 413px
+                    border-radius: 5px
+                    padding: 18px 32px
+                    width: 413px
+                    height: 64px
+                    margin: 0 auto
+                    +screen(m)
+                        padding: 12px 32px
+                        width: 100%
+                        height: 48px
+            
+        div.image
+            position: relative
+            width: 100%
+            aspect-ratio: 1 / 1
+            +screen(m)
+                order: 1
+            img
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+
+        &:nth-child(2n - 1)
+            div.text
+                border-right: unset
+        &:nth-child(2n)
+            div.text
+                border-left: unset
+
+    div.note
+        background-color: rgba(34, 58, 47, 0.1)
+        padding: 83px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 82px
+        +screen(m)
+            padding: 15px
+            grid-template-columns: 1fr
+            grid-gap: 29px
+
+        div.image
+            position: relative
+            width: 100%
+            height: 100%
+            +screen(m)
+                height: auto
+                aspect-ratio: 304 / 167
+            img
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+
+        div.text_wrap
+            max-width: 589px
+            color: black
+            line-height: 150%
+            h2
+                margin-bottom: 16px
+                +screen(m)
+                    font-weight: 600
+                    font-size: 14px
+                    line-height: 143%
+                    margin-bottom: 5px
+            h3
+                margin-top: 50px
+                margin-bottom: 13px
+                +screen(m)
+                    text-align: left !important
+                    margin-top: 16px
+                    margin-bottom: 10px
+            span
+                display: block
+                font-weight: 400
+                font-size: 16px
+                line-height: 150%
+                color: #000
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+            span + span
+                display: block
+                margin-top: 16px
+                +screen(m)
+                    margin-top: 9px
+                
+
+    & + section.forms
+        padding-top: 120px
+        padding-bottom: 120px
+        +screen(m)
+            padding-top: 50px
+            padding-bottom: 50px

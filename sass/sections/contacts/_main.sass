@@ -1,0 +1,174 @@
+section.main
+    margin-bottom: 120px
+    +screen(m)
+        margin-bottom: 50px
+
+    div.container
+        display: grid
+
+    h2
+        margin-bottom: 55px
+        +screen(m)
+            margin-bottom: 20px
+
+    div.contacts
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        justify-content: space-between
+        align-items: center
+        grid-gap: 24px
+        max-width: 1320px
+        margin-bottom: 74px
+        +screen(m)
+            grid-auto-flow: unset
+            grid-auto-columns: auto
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 10px 30px
+            justify-content: start
+            margin-bottom: 20px
+
+        span
+            display: block
+            font-weight: 400
+            font-size: 18px
+            line-height: 130%
+            color: #000
+            opacity: 0.5
+            +screen(m)
+                font-size: 12px
+        a, strong
+            font-weight: 600
+            font-size: 20px
+            line-height: 130%
+            color: #000
+            +screen(m)
+                font-size: 14px
+
+        div.schedule
+            +screen(m)
+                grid-column: 1 / 3
+
+        button
+            border: 1px solid #000
+            border-radius: 5px
+            padding: 18px 32px
+            min-width: 268px
+            +screen(m)
+                display: none
+
+    div.form
+        display: grid
+        grid-template-columns: 540px 1fr
+        grid-gap: 45px
+        margin-bottom: 80px
+        +screen(l)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 30px
+        +screen(m)
+            grid-template-columns: 1fr
+            margin-bottom: 30px
+
+        form
+            display: grid
+            grid-gap: 10px
+            +screen(m)
+                order: 2
+
+            input, textarea
+                border-color: #e4e5e5
+                padding: 24px 20px
+                +screen(m)
+                    padding: 20px 15px
+                &::placeholder
+                    color: #a1a1a1
+
+            button
+                margin-top: 10px
+                font-weight: 400
+                font-size: 14px
+                line-height: 140%
+                letter-spacing: 0.02em
+                text-transform: uppercase
+                color: #fff
+                background: black
+                color: white
+                border-radius: 5px
+                padding: 18px 32px
+                min-width: 268px
+                height: 64px
+                +screen(m)
+                    width: 100%
+                    padding: 17px 32px
+                    margin-top: unset
+                    font-size: 12px
+                    line-height: 120%
+                &:hover
+                    background-color: #223A2F
+
+        div.map
+            display: grid
+            grid-template-rows: 1fr max-content
+            grid-gap: 22px
+            +screen(m)
+                grid-gap: 10px
+                order: 1
+                width: 100%
+                aspect-ratio: 4 / 3
+            +screen(xs)
+                aspect-ratio: 3 / 4
+            iframe
+                width: 100%
+                height: 100%
+            strong
+                font-weight: 600
+                font-size: 20px
+                line-height: 130%
+                color: #000
+                +screen(m)
+                    font-weight: 500
+                    font-size: 12px
+                    line-height: 120%
+
+    div.service
+        h2
+            margin-bottom: 14px
+            +screen(m)
+                margin-bottom: 6px
+        div.table
+            div.row
+                display: grid
+                grid-template-columns: 1fr max-content
+                grid-gap: 5px
+                padding-top: 20px
+                padding-bottom: 20px
+                border-bottom: 1px solid rgba(0,0,0,0.1)
+                +screen(m)
+                    grid-template-columns: 1fr
+                    padding-top: 10px
+                    padding-bottom: 10px
+
+                &:last-child
+                    border: unset
+
+                & > *
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 222%
+                    color: #000
+                    +screen(m)
+                        font-size: 12px
+                        line-height: 120%
+
+                & > *:nth-child(2n)
+                    text-align: right
+                    font-weight: 600
+                    font-size: 20px
+                    +screen(m)
+                        text-align: left
+                        font-size: 14px
+
+
+
+
+

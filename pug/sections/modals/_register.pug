@@ -1,0 +1,31 @@
+dialog(data-modal-name="register")
+    div.container
+
+        div(data-modal-close).cross
+            include ../../../images/modal_cross.svg
+
+        div.content
+            h3 Регистрация
+
+            form(action="") 
+                input(type="text", placeholder="Имя", required)
+                input(type="text", placeholder="Email", required)
+                input(type="text", placeholder="Телефон", required)
+                fieldset.text
+                    input(type="password", placeholder="Пароль", required)
+                    div.eye(onclick="showPassword(this)")
+                        div.show_password
+                            include ../../../images/show_password.svg
+                        div.hide_password
+                            include ../../../images/hide_password.svg
+                button Зарегистрироваться
+                span Нажимая на кнопку «Зарегистрироваться», вы даёте своё согласие на Обработку персональных данных.
+            div.socials
+                span или
+                div.list
+                    a(href="index.html"): img(src="images/google.svg", alt="")
+                    a(href="index.html"): img(src="images/vk.svg", alt="")
+                    a(href="index.html"): img(src="images/facebook.svg", alt="")
+                    a(href="index.html"): img(src="images/apple.svg", alt="")
+            hr
+            a(onclick="createDialog('auth')").auth Войти в уже существующий аккаунт

@@ -1,0 +1,314 @@
+section.main
+    div.container
+
+        div.breadcrumbs
+            a(href="index.html") Главная
+            span Корзина
+
+        h2 Корзина
+
+        div.content
+
+            div.list
+
+                div.control
+                    label(onclick="document.querySelectorAll('input[type=checkbox]').forEach( checkbox => checkbox.checked = true)").checkbox
+                        input(type="checkbox")
+                        span Выбрать все
+                    span.delete Удалить выбранное
+                    div.share
+                        include ../../../images/share.svg
+                        span Поделиться
+
+                div.available
+                    div.accordion.open
+                        div.accordion_caption
+                            span Доставка через 3 дня
+                            include ../../../images/accordion_arrow.svg
+                        div.accordion_content
+                            div.accordion_overflow
+                                div.accordion_wrap
+                                    table
+                                        thead
+                                            tr
+                                                td Наименование товара
+                                                td Количество
+                                                td Сумма
+                                        tbody
+                                            tr
+                                                td.product
+                                                    div.product
+                                                        label.checkbox
+                                                            input(type="checkbox")
+                                                            span
+                                                        img(src="images/webp/9.webp", alt="").preview
+                                                        div.description
+                                                            a(href="product.html", target="blank").title Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год
+                                                            div.info
+                                                                span Цена: 2 500 ₽
+                                                                span Размер: 300 г.
+                                                            div.row
+                                                                div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
+                                                                    include ../../../images/favourite_product.svg
+                                                                    span В избранное
+                                                                div.delete
+                                                                    include ../../../images/search_cross.svg
+                                                                    span Удалить
+                                                td.quantity 
+                                                    div.quantity
+                                                        div.minus: include ../../../images/minus.svg
+                                                        input(type="number", name="quantity", value="1", min="1", max="1000")
+                                                        div.plus: include ../../../images/plus.svg
+                                                td.price
+                                                    div.price
+                                                        span.current 5 000 ₽
+                                                        span.old 2 400 ₽ #[i -25%]
+                                            tr
+                                                td.product
+                                                    div.product
+                                                        label.checkbox
+                                                            input(type="checkbox")
+                                                            span
+                                                        img(src="images/webp/9.webp", alt="").preview
+                                                        div.description
+                                                            a(href="product.html", target="blank").title Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год
+                                                            div.info
+                                                                span Цена: 2 500 ₽
+                                                                span Размер: 300 г.
+                                                            div.row
+                                                                div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
+                                                                    include ../../../images/favourite_product.svg
+                                                                    span В избранное
+                                                                div.delete
+                                                                    include ../../../images/search_cross.svg
+                                                                    span Удалить
+                                                td.quantity 
+                                                    div.quantity
+                                                        div.minus: include ../../../images/minus.svg
+                                                        input(type="number", name="quantity", value="1", min="1", max="1000")
+                                                        div.plus: include ../../../images/plus.svg
+                                                td.price
+                                                    div.price
+                                                        span.current 5 000 ₽
+                                                        span.old 2 400 ₽ #[i -25%]
+                                            tr
+                                                td.product
+                                                    div.product
+                                                        label.checkbox
+                                                            input(type="checkbox")
+                                                            span
+                                                        img(src="images/webp/9.webp", alt="").preview
+                                                        div.description
+                                                            a(href="product.html", target="blank").title Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год
+                                                            div.info
+                                                                span Цена: 2 500 ₽
+                                                                span Размер: 300 г.
+                                                            div.row
+                                                                div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
+                                                                    include ../../../images/favourite_product.svg
+                                                                    span В избранное
+                                                                div.delete
+                                                                    include ../../../images/search_cross.svg
+                                                                    span Удалить
+                                                td.quantity 
+                                                    div.quantity
+                                                        div.minus: include ../../../images/minus.svg
+                                                        input(type="number", name="quantity", value="1", min="1", max="1000")
+                                                        div.plus: include ../../../images/plus.svg
+                                                td.price
+                                                    div.price
+                                                        span.current 5 000 ₽
+                                                        span.old 2 400 ₽ #[i -25%]
+                                            tr
+                                                td.product
+                                                    div.product
+                                                        label.checkbox
+                                                            input(type="checkbox")
+                                                            span
+                                                        img(src="images/webp/9.webp", alt="").preview
+                                                        div.description
+                                                            a(href="product.html", target="blank").title Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год
+                                                            div.info
+                                                                span Цена: 2 500 ₽
+                                                                span Размер: 300 г.
+                                                            div.row
+                                                                div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
+                                                                    include ../../../images/favourite_product.svg
+                                                                    span В избранное
+                                                                div.delete
+                                                                    include ../../../images/search_cross.svg
+                                                                    span Удалить
+                                                td.quantity 
+                                                    div.quantity
+                                                        div.minus: include ../../../images/minus.svg
+                                                        input(type="number", name="quantity", value="1", min="1", max="1000")
+                                                        div.plus: include ../../../images/plus.svg
+                                                td.price
+                                                    div.price
+                                                        span.current 5 000 ₽
+                                                        span.old 2 400 ₽ #[i -25%]
+                    div.accordion.open
+                        div.accordion_caption
+                            span Доставка через 8 дней
+                            include ../../../images/accordion_arrow.svg
+                        div.accordion_content
+                            div.accordion_overflow
+                                div.accordion_wrap
+                                    table
+                                        tbody
+                                            tr
+                                                td.product
+                                                    div.product
+                                                        label.checkbox
+                                                            input(type="checkbox")
+                                                            span
+                                                        img(src="images/webp/9.webp", alt="").preview
+                                                        div.description
+                                                            a(href="product.html", target="blank").title Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год
+                                                            div.info
+                                                                span Цена: 2 500 ₽
+                                                                span Размер: 300 г.
+                                                            div.row
+                                                                div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
+                                                                    include ../../../images/favourite_product.svg
+                                                                    span В избранное
+                                                                div.delete
+                                                                    include ../../../images/search_cross.svg
+                                                                    span Удалить
+                                                td.quantity 
+                                                    div.quantity
+                                                        div.minus: include ../../../images/minus.svg
+                                                        input(type="number", name="quantity", value="1", min="1", max="1000")
+                                                        div.plus: include ../../../images/plus.svg
+                                                td.price
+                                                    div.price
+                                                        span.current 5 000 ₽
+                                                        span.old 2 400 ₽ #[i -25%]
+                                            tr
+                                                td.product
+                                                    div.product
+                                                        label.checkbox
+                                                            input(type="checkbox")
+                                                            span
+                                                        img(src="images/webp/9.webp", alt="").preview
+                                                        div.description
+                                                            a(href="product.html", target="blank").title Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год
+                                                            div.info
+                                                                span Цена: 2 500 ₽
+                                                                span Размер: 300 г.
+                                                            div.row
+                                                                div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
+                                                                    include ../../../images/favourite_product.svg
+                                                                    span В избранное
+                                                                div.delete
+                                                                    include ../../../images/search_cross.svg
+                                                                    span Удалить
+                                                td.quantity 
+                                                    div.quantity
+                                                        div.minus: include ../../../images/minus.svg
+                                                        input(type="number", name="quantity", value="1", min="1", max="1000")
+                                                        div.plus: include ../../../images/plus.svg
+                                                td.price
+                                                    div.price
+                                                        span.current 5 000 ₽
+                                                        span.old 2 400 ₽ #[i -25%]
+                                        
+                div.notavailable
+                    div.accordion.open
+                        div.accordion_caption
+                            span Доставка через 8 дней
+                            include ../../../images/accordion_arrow.svg
+                        div.accordion_content
+                            div.accordion_overflow
+                                div.accordion_wrap
+                                    table
+                                        tbody
+                                            tr
+                                                td.product
+                                                    div.product
+                                                        label.checkbox
+                                                            input(type="checkbox")
+                                                            span
+                                                        img(src="images/webp/9.webp", alt="").preview
+                                                        div.description
+                                                            a(href="product.html", target="blank").title Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год
+                                                            div.info
+                                                                span Цена: 2 500 ₽
+                                                                span Размер: 300 г.
+                                                            div.row
+                                                                div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
+                                                                    include ../../../images/favourite_product.svg
+                                                                    span В избранное
+                                                                div.delete
+                                                                    include ../../../images/search_cross.svg
+                                                                    span Удалить
+                                                td.change
+                                                    button Заменить
+                                            tr
+                                                td.product
+                                                    div.product
+                                                        label.checkbox
+                                                            input(type="checkbox")
+                                                            span
+                                                        img(src="images/webp/9.webp", alt="").preview
+                                                        div.description
+                                                            a(href="product.html", target="blank").title Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год
+                                                            div.info
+                                                                span Цена: 2 500 ₽
+                                                                span Размер: 300 г.
+                                                            div.row
+                                                                div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
+                                                                    include ../../../images/favourite_product.svg
+                                                                    span В избранное
+                                                                div.delete
+                                                                    include ../../../images/search_cross.svg
+                                                                    span Удалить
+                                                td.change
+                                                    button Заменить
+
+            div.auth
+                h3 Авторизация
+                span Авторизуйтесь, чтобы участвовать в накопительной программе лояльности и оплачивайте частично бонусами.
+                div.buttons
+                    button(data-modal-target="auth").login войти
+                    button(data-modal-target="register").register регистрация
+
+            div.total
+                h3 Ваша корзина
+                div.prices
+                    span Товары (3)
+                    span 21 970 ₽
+                    span Скидка
+                    span(style="color: #ED6F7A") - 10 657 ₽
+                    span Самовывоз
+                    span 0 ₽ 
+                div.result
+                    strong Итого
+                    span 21 970 ₽
+                input(type="text", placeholder="Введите промокод")
+                a(href="index.html").button.checkout Перейти к оформлению
+                a(href="catalog.html").button.return продолжить покупки 
+                div.info
+                    span Доступные способы и время доставки можно выбрать при оформлении заказа
+                    span(style="color: #ed6f7a") До бесплатной доставки закажите на 1000 ₽
+
+            div.gift
+                div.text
+                    h3 Получите подарок!
+                    span При заказе от 7000 ₽ вы можете выбрать один из подарков
+                    a(href="catalog.html").button в каталог
+                img(src="images/gift.svg", alt="")
+
+            div.delivery
+                h3 Доставка
+                div.table
+                    span Экспресс-доставка
+                    span #[img(src="images/webp/rocket.png")] #[a Сегодня, через 30 мин]
+                    span Самовывоз в г. Москва
+                    span(style="font-weight: 600") 2 магазина, сегодня
+                    span Доставка курьером
+                    span Через 3 дня
+                    span ПВЗ
+                    span Через 3 дня
+
+            

@@ -1,0 +1,27 @@
+html:has(dialog[open])
+    overflow-y: hidden
+    margin-right: var(--scrollbar-width)
+
+dialog
+    margin: auto
+    svg.cross
+        position: fixed
+        top: var(--section-side-gap)
+        right: var(--section-side-gap)
+        cursor: pointer
+        justify-self: end
+    div.container
+        padding: var(--section-side-gap)
+        max-width: 640px
+    &::backdrop
+        position: fixed
+        inset: 0px
+        background: #2E5770
+        opacity: 0.4
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
+
+@import modals/_auth
+@import modals/_register
+@import modals/_cart

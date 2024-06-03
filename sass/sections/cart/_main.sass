@@ -1,0 +1,554 @@
+section.main
+    margin-bottom: 60px
+    +screen(m)
+        margin-bottom: 50px
+
+    div.list
+        grid-area: List
+        display: grid
+        grid-gap: 20px
+        +screen(m)
+            grid-gap: 15px
+
+    div.content
+        display: grid
+        align-content: start
+        grid-template-columns: 1fr 580px
+        grid-template-areas: 'List Auth' 'List Total' 'List Gift' 'List Delivery'
+        grid-template-rows: repeat(3, max-content) 1fr
+        grid-gap: 10px
+        margin-top: 38px
+        +screen(xl)
+            grid-template-columns: 1fr 360px
+        +screen(l)
+            grid-template-columns: 1fr
+            grid-template-areas: 'Auth' 'Gift' 'List' 'Total' 'Delivery'
+        +screen(m)
+            margin-top: 16px
+
+    div.control
+        background-color: #FAFAFA
+        display: grid
+        align-items: center
+        grid-template-columns: max-content 1fr max-content
+        padding: 20px
+        span
+            font-weight: 500
+            font-size: 18px
+            color: #4e5154
+            padding-top: unset
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+        span.delete
+            color: #949494
+            padding-left: 20px
+            +screen(m)
+                padding-left: 10px
+        div.share
+            display: flex
+            align-items: center
+            gap: 5px
+            +screen(m)
+                span
+                    display: none
+                svg
+                    width: 24px
+                    height: 24px
+                    path
+                        stroke-width: 1px
+
+    div.notavailable
+        tr
+            grid-template-areas: 'Product' 'Change'
+            grid-template-columns: 1fr
+        div.product
+            img.preview
+                opacity: 0.5
+            div.description
+                a.title
+                    color: #AAAAAA
+                div.info
+                    span
+                        color: #ADADAD
+
+    div.accordion
+        background-color: #FAFAFA
+        div.accordion_caption
+            cursor: pointer
+            display: grid
+            align-items: center
+            grid-template-columns: 1fr max-content
+            padding: 20px
+            border-bottom: 1px solid rgba(78, 81, 84, 0.1)
+            font-weight: 600
+            font-size: 16px
+            line-height: 140%
+            color: #223A2F
+            +screen(m)
+                padding: 15px
+            svg
+                width: 24px
+                height: 24px
+                transform: rotate(180deg)
+                transition: all .2s
+                +screen(m)
+                    width: 14px
+                    height: 14px
+        div.accordion_wrap
+            padding: 20px
+            +screen(m)
+                padding: unset
+        &.open
+            div.accordion_caption
+                svg
+                    transform: rotate(0deg)
+        &:not(:first-child)
+            border-top: 1px solid rgba(78, 81, 84, 0.1)
+
+    table
+        width: 100%
+        td
+            vertical-align: top
+
+        thead
+            line-height: 125%
+            color: #4e5154
+            opacity: 0.5
+            +screen(m)
+                display: none
+            td
+                padding-bottom: 20px
+
+        tbody
+            tr
+                +screen(m)
+                    display: grid
+                    grid-template-areas: 'Product Product' 'Price Quantity'
+                    grid-template-columns: 1fr max-content
+                    grid-gap: 15px
+                    padding: 10px 15px
+                    border-bottom: 1px solid rgba(78, 81, 84, 0.1)
+                &:last-child td
+                    padding-bottom: unset
+                    border-bottom: unset !important
+                    
+            td
+                border-bottom: 1px solid rgba(78, 81, 84, 0.1)
+                padding-top: 20px
+                padding-bottom: 20px
+                +screen(m)
+                    padding: unset
+                    border: unset
+
+            td.product
+                grid-area: Product
+            td.quantity
+                grid-area: Quantity
+                +screen(m)
+                    justify-self: end
+            td.price
+                grid-area: Price
+                +screen(m)
+                    padding-left: 76px
+            td.change
+                grid-area: Change
+                display: grid
+                justify-content: end
+                +screen(m)
+                    justify-content: stretch
+                button
+                    border-radius: unset
+                    min-width: 294px
+                    +screen(m)
+                        width: 100%
+
+    div.product
+        display: grid
+        align-items: start
+        grid-template-columns: max-content max-content 1fr
+        width: 100%
+
+        label.checkbox
+            align-self: center
+            margin-right: 36px
+            +screen(m)
+                margin-right: 10px
+                align-self: start
+
+        img
+            width: 124px
+            height: 124px
+            object-fit: cover
+            object-position: center
+            margin-right: 36px
+            +screen(m)
+                width: 34px
+                height: 34px
+                margin-right: 10px
+
+        div.description
+            position: relative
+            margin-right: 50px
+            +screen(m)
+                margin-right: unset
+                padding-right: 30px
+
+            a.title
+                display: block
+                font-weight: 400
+                font-size: 18px
+                line-height: 140%
+                letter-spacing: 0.02em
+                text-transform: uppercase
+                color: #4e5154
+                margin-bottom: 10px
+                +screen(m)
+                    font-size: 12px
+
+            div.info
+                display: grid
+                grid-gap: 5px
+                font-weight: 400
+                font-size: 12px
+                line-height: 140%
+                color: #adadad
+                margin-bottom: 15px
+                +screen(m)
+                    display: flex
+                    flex-wrap: wrap
+                    gap: 10px
+                    margin-bottom: unset
+
+            div.row
+                display: flex
+                align-items: center
+                gap: 15px
+                +screen(m)
+                    flex-direction: column
+                    position: absolute
+                    top: 0px
+                    right: 0px
+
+            div.favourite
+                display: grid
+                align-items: center
+                grid-template-columns: repeat(2, max-content)
+                grid-gap: 5px
+                +screen(m)
+                    grid-template-columns: 1fr
+                svg 
+                    path
+                        stroke: #223A2F
+                        stroke-width: 1px
+                    +screen(m)
+                        width: 14px
+                        height: 14px
+                span
+                    +screen(m)
+                        display: none
+            div.delete
+                display: grid
+                align-items: center
+                grid-template-columns: repeat(2, max-content)
+                grid-gap: 5px
+                +screen(m)
+                    grid-template-columns: 1fr
+                svg 
+                    path
+                        stroke: #223A2F
+                        stroke-width: 1px
+                    +screen(m)
+                        width: 14px
+                        height: 14px
+                span
+                    +screen(m)
+                        display: none
+
+    div.quantity
+        user-select: none
+        display: grid
+        grid-template-columns: repeat(3, max-content)
+        align-items: center
+        justify-content: center
+        margin-right: 50px
+        border: 1px solid rgba(78, 81, 84, 0.1)
+        border-radius: 0 20px
+        width: 114px
+        height: 47px
+        padding: 3px 6px
+        +screen(m)
+            width: 88px
+            height: 28px
+            margin-right: unset
+        div
+            display: grid
+            align-items: center
+            justify-items: center
+            cursor: pointer
+            height: 20px
+            width: 20px
+            +screen(m)
+                width: 14px
+                height: 14px
+        input
+            text-align: center
+            &::-webkit-inner-spin-button
+                display: none
+            &::-webkit-outer-spin-button
+                display: none
+            +screen(m)
+                font-size: 12px
+                width: 40px
+        svg
+            +screen(m)
+                width: 14px
+                height: 14px
+            line
+                stroke: #4E5154
+
+    div.price
+        display: grid
+        grid-gap: 5px
+        span.current
+            font-weight: 700
+            font-size: 20px
+            text-transform: uppercase
+            color: #4e5154
+            white-space: nowrap
+            +screen(m)
+                font-size: 12px
+        span.old
+            font-weight: 500
+            font-size: 16px
+            line-height: 125%
+            color: #adadad
+            text-decoration: line-through
+            white-space: nowrap
+            +screen(m)
+                font-size: 12px
+            i
+                padding: 3px 4px
+                border-radius: 2px
+                background: #223A2F
+                font-style: normal
+                color: white
+                border-radius: 2px
+                width: 39px
+                height: 25px
+
+    div.auth
+        grid-area: Auth
+        padding: 20px
+        background: #fafafa
+        +screen(m)
+            padding: 15px 20px
+
+        h3
+            font-weight: 600
+            font-size: 24px
+            line-height: 120%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            color: #4e5154
+            margin-bottom: 16px
+            +screen(m)
+                font-size: 16px
+                margin-bottom: 5px
+        span
+            font-weight: 400
+            font-size: 14px
+            line-height: 140%
+            color: #4e5154
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+        div.buttons
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 21px
+            margin-top: 24px
+            +screen(m)
+                grid-gap: 10px
+                margin-top: 16px
+            button.login
+                width: 100%
+                padding: 20px
+                border-radius: unset
+                background-color: #223A2F
+                color: white
+            button.register
+                width: 100%
+                padding: 20px
+                border-radius: unset
+
+    div.total
+        grid-area: Total
+        padding: 20px
+        background: #fafafa
+        +screen(m)
+            padding: 15px 20px
+
+        h3
+            font-weight: 600
+            font-size: 24px
+            line-height: 120%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            color: #4e5154
+            margin-bottom: 21px
+            +screen(m)
+                font-size: 16px
+                margin-bottom: 11px
+                
+        div.prices
+            display: grid
+            grid-template-columns: 1fr max-content
+            grid-gap: 5px
+            font-weight: 400
+            font-size: 18px
+            line-height: 167%
+            color: #4e5154
+            margin-bottom: 30px
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+                grid-gap: 10px
+                margin-bottom: 10px
+            & > *:nth-child(2n)
+                font-weight: 600
+                text-align: right
+        div.result
+            display: grid
+            grid-template-columns: 1fr max-content
+            grid-gap: 5px
+            border-top: 1px solid rgba(78, 81, 84, 0.1)
+            padding-top: 20px
+            padding-bottom: 20px
+            color: #4e5154
+            strong
+                font-weight: 600
+                font-size: 24px
+                line-height: 120%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                color: #4e5154
+                +screen(m)
+                    font-size: 16px
+            span
+                font-weight: 600
+                text-align: right
+        a.checkout
+            width: 100%
+            padding: 20px
+            border-radius: unset
+            background-color: #223A2F
+            color: white
+            text-align: center
+            margin-top: 32px
+            +screen(m)
+                margin-top: 23px
+        a.return
+            width: 100%
+            padding: 20px
+            border-radius: unset
+            text-align: center
+            margin-top: 10px
+
+        div.info
+            display: grid
+            grid-gap: 20px
+            line-height: 125%
+            color: #adadad
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+                grid-gap: 10px
+
+    div.delivery
+        align-self: start
+        grid-area: Delivery
+        padding: 20px
+        background: #fafafa
+        +screen(m)
+            padding: 15px 20px
+
+        h3
+            font-weight: 600
+            font-size: 24px
+            line-height: 120%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            color: #4e5154
+            margin-bottom: 21px
+            +screen(m)
+                font-size: 16px
+                margin-bottom: 11px
+        div.table
+            display: grid
+            grid-template-columns: 1fr max-content
+            grid-gap: 24px
+            font-weight: 400
+            font-size: 16px
+            line-height: 125%
+            color: #4e5154
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+                grid-gap: 10px
+            & > *:nth-child(2n)
+                text-align: right
+
+            a
+                border-bottom: 1px solid #4E5154
+
+    div.gift
+        overflow: clip
+        grid-area: Gift
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr max-content
+        border-radius: 5px
+        height: 238px
+        background: rgba(46, 87, 112, 0.06)
+        +screen(m)
+            height: auto
+            grid-template-columns: 1fr 120px
+        div.text
+            padding: 20px
+            +screen(m)
+                padding: 15px 20px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            object-position: top right
+
+        h3
+            font-weight: 600
+            font-size: 24px
+            line-height: 120%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            color: #2e5770
+            margin-bottom: 24px
+            +screen(m)
+                font-size: 14px
+                margin-bottom: 5px
+        span
+            color: #4e5154
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+        a.button
+            width: 100%
+            padding: 20px 57px
+            border-radius: unset
+            justify-self: start
+            width: max-content
+            margin-top: 24px
+            +screen(m)
+                margin-top: 16px
+                padding: 16px 32px
+

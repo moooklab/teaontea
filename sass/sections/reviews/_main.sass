@@ -1,0 +1,41 @@
+section.main
+    margin-bottom: 120px
+    +screen(m)
+        margin-bottom: 50px
+
+    div.banner
+        background-color: #F2F5F6
+        padding: 73px 107px
+        display: grid
+        align-items: center
+        grid-template-columns: max-content 1fr
+        grid-gap: 221px
+        +screen(l)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 30px
+        +screen(m)
+            padding: 32px
+        +screen(s)
+            grid-template-columns: 1fr
+
+        img
+            width: 100%
+
+        div.text
+            max-width: 575px
+            display: grid
+            grid-gap: 24px
+            +screen(m)
+                grid-gap: 16px
+
+            h2
+                color: #2e5770
+
+            span
+                font-weight: 400
+                font-size: 20px
+                line-height: 140%
+                color: #0b1700
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%

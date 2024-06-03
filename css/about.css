@@ -1,0 +1,317 @@
+section.main div.mission {
+  padding: 40px 50px;
+  margin-bottom: 155px;
+  background-color: rgba(34, 58, 47, 0.1);
+}
+@media (max-width: 960px) {
+  section.main div.mission {
+    margin-bottom: 50px;
+  }
+}
+section.main div.mission h2 {
+  margin-bottom: 24px;
+}
+section.main div.mission span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: #000;
+}
+@media (max-width: 960px) {
+  section.main div.mission span {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.main div.list {
+  display: grid;
+  margin-bottom: 60px;
+}
+@media (max-width: 960px) {
+  section.main div.list {
+    grid-gap: 58px;
+  }
+}
+section.main div.tea {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 960px) {
+  section.main div.tea {
+    grid-template-columns: 1fr;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+}
+section.main div.tea div.text {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 960px) {
+  section.main div.tea div.text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    border: unset !important;
+    padding: 20px 18px;
+  }
+}
+section.main div.tea div.text div.text_wrap {
+  max-width: 460px;
+}
+section.main div.tea div.text div.text_wrap h3 {
+  margin-bottom: 24px;
+}
+section.main div.tea div.text div.text_wrap span {
+  display: block;
+  margin-bottom: 32px;
+}
+@media (max-width: 960px) {
+  section.main div.tea div.text div.text_wrap span {
+    font-size: 12px;
+    line-height: 120%;
+    text-align: center;
+    color: #000;
+  }
+}
+section.main div.tea div.text div.text_wrap button {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  color: white;
+  background: #000;
+  max-width: 413px;
+  border-radius: 5px;
+  padding: 18px 32px;
+  width: 413px;
+  height: 64px;
+  margin: 0 auto;
+}
+@media (max-width: 960px) {
+  section.main div.tea div.text div.text_wrap button {
+    padding: 12px 32px;
+    width: 100%;
+    height: 48px;
+  }
+}
+section.main div.tea div.image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+@media (max-width: 960px) {
+  section.main div.tea div.image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+section.main div.tea div.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.main div.tea:nth-child(2n-1) div.text {
+  border-right: unset;
+}
+section.main div.tea:nth-child(2n) div.text {
+  border-left: unset;
+}
+section.main div.note {
+  background-color: rgba(34, 58, 47, 0.1);
+  padding: 83px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 82px;
+}
+@media (max-width: 960px) {
+  section.main div.note {
+    padding: 15px;
+    grid-template-columns: 1fr;
+    grid-gap: 29px;
+  }
+}
+section.main div.note div.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 960px) {
+  section.main div.note div.image {
+    height: auto;
+    aspect-ratio: 304/167;
+  }
+}
+section.main div.note div.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.main div.note div.text_wrap {
+  max-width: 589px;
+  color: black;
+  line-height: 150%;
+}
+section.main div.note div.text_wrap h2 {
+  margin-bottom: 16px;
+}
+@media (max-width: 960px) {
+  section.main div.note div.text_wrap h2 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    margin-bottom: 5px;
+  }
+}
+section.main div.note div.text_wrap h3 {
+  margin-top: 50px;
+  margin-bottom: 13px;
+}
+@media (max-width: 960px) {
+  section.main div.note div.text_wrap h3 {
+    text-align: left !important;
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+}
+section.main div.note div.text_wrap span {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000;
+}
+@media (max-width: 960px) {
+  section.main div.note div.text_wrap span {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.main div.note div.text_wrap span + span {
+  display: block;
+  margin-top: 16px;
+}
+@media (max-width: 960px) {
+  section.main div.note div.text_wrap span + span {
+    margin-top: 9px;
+  }
+}
+section.main + section.forms {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@media (max-width: 960px) {
+  section.main + section.forms {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+section.forms {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+@media (max-width: 960px) {
+  section.forms {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+section.forms div.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+@media (max-width: 640px) {
+  section.forms div.container {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+section.forms div.callback, section.forms div.subscribe {
+  background-color: #F7F7F2;
+  padding: 32px 30px;
+}
+@media (max-width: 960px) {
+  section.forms div.callback, section.forms div.subscribe {
+    padding: 30px 20px;
+  }
+}
+section.forms div.callback div.title, section.forms div.subscribe div.title {
+  display: grid;
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+section.forms div.callback div.title strong, section.forms div.subscribe div.title strong {
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #0b1700;
+}
+@media (max-width: 960px) {
+  section.forms div.callback div.title strong, section.forms div.subscribe div.title strong {
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+section.forms div.callback div.title span, section.forms div.subscribe div.title span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  color: #575c60;
+}
+@media (max-width: 960px) {
+  section.forms div.callback div.title span, section.forms div.subscribe div.title span {
+    font-size: 12px;
+  }
+}
+section.forms div.callback button, section.forms div.subscribe button {
+  border: unset;
+  width: 100%;
+}
+section.forms div.callback form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+@media (max-width: 1280px) {
+  section.forms div.callback form {
+    grid-template-columns: 1fr;
+  }
+}
+section.forms div.callback form input.email, section.forms div.callback form textarea.comment, section.forms div.callback form label.checkbox, section.forms div.callback form button {
+  grid-column: 1/3;
+}
+@media (max-width: 1280px) {
+  section.forms div.callback form input.email, section.forms div.callback form textarea.comment, section.forms div.callback form label.checkbox, section.forms div.callback form button {
+    grid-column: auto;
+  }
+}
+section.forms div.subscribe form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+}/*# sourceMappingURL=about.css.map */

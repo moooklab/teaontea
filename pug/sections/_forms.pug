@@ -1,0 +1,26 @@
+section.forms
+    div.container
+        div.callback
+            div.title
+                strong Оставь заявку на звонок
+                span Оставьте свои данные в форме обратной связи мы свяжемся с вами в ближайшее время
+            form
+                input(type="text", name="name", placeholder="Имя *", required)
+                input(type="tel", name="phone", placeholder="Телефон *", required)
+                input(type="email", name="email", placeholder="Email *", required).email
+                textarea(name="commenty", placeholder="Ваш комментарий", rows="4").comment
+                label.checkbox
+                    input(type="checkbox", name="", required)
+                    span Нажимая на кнопку «ОТПРАВИТЬ», вы соглашаетесь с условиями #[a(href="###") Политики конфиденциальности]
+                button отправить
+        div.subscribe
+            div.title
+                strong Подпишись на рассылку
+                span Оставьте свои данные в форме обратной связи мы свяжемся с вами в ближайшее время
+            form
+                input(type="text", name="name", placeholder="Имя *", required)
+                input(type="email", name="email", placeholder="Email *", required)
+                label.checkbox
+                    input(type="checkbox", name="", required)
+                    span Нажимая на кнопку «ОТПРАВИТЬ», вы соглашаетесь с условиями #[a(href="###") Политики конфиденциальности]
+                button подписаться

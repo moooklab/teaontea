@@ -1,0 +1,167 @@
+section.main
+    div.container
+
+        div.breadcrumbs
+            a(href="index.html") Главная
+            a(href="index.html") Каталог
+            a(href="index.html") Белый чай
+            span Бай Ча Цзингу
+
+        a(href="catalog.html").back
+            include ../../../images/back_arrow.svg
+            span В каталог
+
+        div.top
+            div.stars
+                div.star: include ../../../images/review_star.svg
+                div.star: include ../../../images/review_star.svg
+                div.star: include ../../../images/review_star.svg
+                div.star: include ../../../images/review_star.svg
+                div.star.empty: include ../../../images/review_star.svg
+            div.count 1000 отзывов
+            div.favourite
+                include ../../../images/favourite.svg
+                span В избранное
+            div.share
+                include ../../../images/share.svg
+                span Поделиться
+            div.article
+                span Артикул:
+                span 100225
+
+        div.wrap
+
+            div.gallery
+                img(src="images/webp/9.webp", alt="")
+                img(src="images/webp/30.webp", alt="")
+                img(src="images/webp/31.webp", alt="")
+                img(src="images/webp/32.webp", alt="")
+                img(src="images/webp/33.webp", alt="")
+                img(src="images/webp/34.webp", alt="")
+                img(src="images/webp/35.webp", alt="")
+                img(src="images/webp/36.webp", alt="")
+                img(src="images/webp/emblem.webp", alt="").emblem
+
+            div.content
+                div.title
+                    h2 Огранический шу пуэр Тулинь, точа Е813, гнездо 336гр, 2014 год
+                    span Золотой пион из Гуджоу 2022 SHQ осень
+                
+                div.tag New | Hit
+                
+                div.packing
+                    strong Фасовка (гр):
+                    div.list
+                        label
+                            input(type="radio", name="")
+                            span 25 гр-1000 ₽
+                        label
+                            input(type="radio", name="")
+                            span 50 гр-1000 ₽
+                        label
+                            input(type="radio", name="")
+                            span 100 гр-4000 ₽
+                        label
+                            input(type="radio", name="")
+                            span 250 гр-8000 ₽
+                    div.custom
+                        input(type="number", name="", placeholder="Введите сумму")
+                        span.equal =
+                        span.weight 250 гр
+
+                div.price
+                    strong Стоимость:
+                    div.prices
+                        span.current 2 400 ₽
+                        span.old 2 040 ₽
+                    div.available
+                        include ../../../images/available_tick.svg
+                        span Есть в наличии
+
+                div.button
+                    div.quantity
+                        div.minus: img(src="images/minus.svg", alt="")
+                        input(type="number", name="quantity", value="1", min="1", max="1000")
+                        div.plus: img(src="images/plus.svg", alt="")
+                    button(data-modal-target="cart") в корзину
+                
+                button.buy заказать в 1 клик
+
+                div.tabs
+                    div.tabs_captions
+                        div.tab_caption.opened Характеристика
+                        div.tab_caption Наличие
+                        div.tab_caption Доставка
+                    div.tabs_contents
+                        div.tab_content.opened
+                            div.table
+                                strong Характеристики:
+                                table
+                                    tbody
+                                        tr
+                                            td Тип
+                                            td Красный чай
+                                        tr
+                                            td Место
+                                            td Провинция Юннань
+                                        tr
+                                            td Страна
+                                            td Китай
+                                        tr
+                                            td Сбор
+                                            td Осень 2020
+                            div.table
+                                strong Как заваривать:
+                                table
+                                    tbody
+                                        tr
+                                            td Температура воды
+                                            td 80о-90оС
+                                        tr
+                                            td Заварка
+                                            td 5–20 грамм
+                                        tr
+                                            td Посуда
+                                            td Гайвань, типот
+                                        tr
+                                            td Количество заварки
+                                            td 7 грамм на 150 мл воды
+                                        tr
+                                            td Упаковка
+                                            td Пакет, 250 грамм
+                        div.tab_content
+                            div.table
+                                strong Наличие:
+                                table.available
+                                    tbody
+                                        tr
+                                            td Удалённый склад
+                                            td 
+                                                div.dots
+                                                    div.dot
+                                                    div.dot
+                                                    div.dot
+                                        tr
+                                            td Интернет-магазин
+                                            td 
+                                                div.dots
+                                                    div.dot
+                                                    div.dot
+                                                    div.dot.empty
+                        div.tab_content
+                            div.table
+                                strong Доставка:
+                                table
+                                    tbody
+                                        tr
+                                            td Экспресс-доставка
+                                            td Сегодня, через 30 мин
+                                        tr
+                                            td Самовывоз в г. Москва
+                                            td 2 магазина, сегодня
+                                        tr
+                                            td Доставка курьером
+                                            td Через 3 дня
+                                        tr
+                                            td ПВЗ
+                                            td Через 3 дня
