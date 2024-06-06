@@ -16,8 +16,12 @@ header
             input(type="search", placeholder="Поиск")
 
         div.personal
-            div.menu: include ../../images/menu.svg
-            div.search: include ../../images/search.svg
+            div(onclick="this.closest('header').classList.toggle('menu');this.closest('header').querySelector('div.popup_menu').classList.toggle('opened')").menu
+                div.icon: include ../../images/menu.svg
+                div.cross: include ../../images/search_cross.svg
+            div(onclick="this.closest('header').classList.toggle('search');this.closest('header').querySelector('div.popup_menu').classList.toggle('opened')").search
+                div.icon: include ../../images/search.svg
+                div.cross: include ../../images/search_cross.svg
             div(data-modal-target="auth").account: include ../../images/account.svg
             a(href="favourite.html").favourite: include ../../images/favourite.svg
             a(href="cart.html").cart
@@ -33,22 +37,35 @@ header
                 a(href="index.html")  $
                 a(href="index.html")  €
 
-    //- section.menu
-    //-     div.container
-    //-         menu
-    //-             a(href="index.html") Каталог
-    //-             a(href="index.html") Чай
-    //-             a(href="index.html") Книги
-    //-             a(href="index.html") Чайники
-    //-             a(href="index.html") Нефрит
-    //-         menu
-    //-             a(href="index.html") покупателю
-    //-             a(href="index.html") Доставка
-    //-             a(href="index.html") Оплата
-    //-             a(href="index.html") Контакты
-    //-             a(href="index.html") Возврат
-    //-         menu
-    //-             a(href="index.html") о компании
-    //-             a(href="index.html") О нас
-    //-             a(href="index.html") Блог
-    //-             a(href="index.html") Отзывы
+    div.popup_menu
+        div.popup_overflow
+            div.popup_content
+                form(tabindex="1").search
+                    div.search_icon: include ../../images/search.svg
+                    input(type="search", placeholder="Поиск")
+                div.menu
+                    strong Каталог
+                    a(href="index.html") Чай
+                    a(href="index.html") Книги
+                    a(href="index.html") Чайники
+                    a(href="index.html") Нефрит
+                div.menu
+                    strong покупателю
+                    a(href="index.html") Доставка
+                    a(href="index.html") Оплата
+                    a(href="index.html") Контакты
+                    a(href="index.html") Возврат
+                div.menu
+                    strong о компании
+                    a(href="index.html") О нас
+                    a(href="index.html") Блог
+                    a(href="index.html") Отзывы
+                a(href="catalog.html").collection
+                    img(src="images/webp/18.webp", alt="")
+                    span Лимитированные коллекции
+                a(href="catalog.html").collection
+                    img(src="images/webp/18.webp", alt="")
+                    span Лимитированные коллекции
+                a(href="catalog.html").collection
+                    img(src="images/webp/18.webp", alt="")
+                    span Лимитированные коллекции

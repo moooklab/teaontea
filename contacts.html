@@ -79,14 +79,23 @@
                     <input type="search" placeholder="Поиск">
                 </form>
                 <div class="personal">
-                    <div class="menu"><svg width="31" height="22" viewBox="0 0 31 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="menu" onclick="this.closest('header').classList.toggle('menu');this.closest('header').querySelector('div.popup_menu').classList.toggle('opened')">
+                        <div class="icon"><svg width="31" height="22" viewBox="0 0 31 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 1H31" stroke="#223A2F"/>
 <path d="M0 11H31" stroke="#223A2F"/>
 <path d="M0 21H31" stroke="#223A2F"/>
 </svg>
 
+                        </div>
+                        <div class="cross"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L17 17" stroke="#223A2F"/>
+<path d="M1 17L17 1" stroke="#223A2F"/>
+</svg>
+
+                        </div>
                     </div>
-                    <div class="search"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="search" onclick="this.closest('header').classList.toggle('search');this.closest('header').querySelector('div.popup_menu').classList.toggle('opened')">
+                        <div class="icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_3005_1941)">
 <circle cx="11.7499" cy="11.75" r="10.75" stroke="#223A2F"/>
 <path d="M19.2499 19.25L25.4999 25.5" stroke="#223A2F"/>
@@ -98,6 +107,13 @@
 </defs>
 </svg>
 
+                        </div>
+                        <div class="cross"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L17 17" stroke="#223A2F"/>
+<path d="M1 17L17 1" stroke="#223A2F"/>
+</svg>
+
+                        </div>
                     </div>
                     <div class="account" data-modal-target="auth"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="12" cy="6" r="5.6" stroke="#223A2F" stroke-width="0.8"/>
@@ -116,6 +132,31 @@
                 <div class="currency">
                     <div class="current" onclick="this.parentNode.classList.toggle('open')"><span>₽</span><img src="images/currency_arrow.svg" alt=""></div>
                     <div class="list"><a href="index.html"> ₽</a><a href="index.html"> $</a><a href="index.html"> €</a></div>
+                </div>
+            </div>
+            <div class="popup_menu">
+                <div class="popup_overflow">
+                    <div class="popup_content">
+                        <form class="search" tabindex="1">
+                            <div class="search_icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3005_1941)">
+<circle cx="11.7499" cy="11.75" r="10.75" stroke="#223A2F"/>
+<path d="M19.2499 19.25L25.4999 25.5" stroke="#223A2F"/>
+</g>
+<defs>
+<clipPath id="clip0_3005_1941">
+<rect width="26" height="26" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+                            </div>
+                            <input type="search" placeholder="Поиск">
+                        </form>
+                        <div class="menu"><strong>Каталог</strong><a href="index.html">Чай</a><a href="index.html">Книги</a><a href="index.html">Чайники</a><a href="index.html">Нефрит</a></div>
+                        <div class="menu"><strong>покупателю</strong><a href="index.html">Доставка</a><a href="index.html">Оплата</a><a href="index.html">Контакты</a><a href="index.html">Возврат</a></div>
+                        <div class="menu"><strong>о компании</strong><a href="index.html">О нас</a><a href="index.html">Блог</a><a href="index.html">Отзывы</a></div><a class="collection" href="catalog.html"><img src="images/webp/18.webp" alt=""><span>Лимитированные коллекции</span></a><a class="collection" href="catalog.html"><img src="images/webp/18.webp" alt=""><span>Лимитированные коллекции</span></a><a class="collection" href="catalog.html"><img src="images/webp/18.webp" alt=""><span>Лимитированные коллекции</span></a>
+                    </div>
                 </div>
             </div>
         </header>
